@@ -4,10 +4,95 @@
 
 <note warning>Zde bude zadání</note>
 
-===== Soubory ke stažení =====
+===== Soubory ke stažení a odkazy =====
+  * Torzo semestrálky
+  * [[http://www.cs.sjsu.edu/~louden/cmptext/|Překladač ke knize Compiler Construction]]
+  
+===== Popis architektury Tiny Machine (Louden) =====
 
-===== Všeobecné informace =====
+Snadný přehled o architektuře dostaneme pohledem do zdrojového kódu interpreteru v souboru ''tm.c''
 
-  * Popis architektury Tiny Machine
-  * Rady pro práci s pamětí
+Jedná se o RISC s defaultně 8 registry (0-7). Má oddělenou paměť pro instrukce a data. Jejich velikosti lze definovat makrem ve zdrojovém kódu interpreteru a obě jsou standardně velké 1024 slov.
 
+Poslední registr (7) se používá jako Program Counter (PC) a lze jej modifikovat přímo registrovými instrukcemi (lze tak realizovat nepodmíněný skok).
+
+==== Instrukční set ====
+
+Instrukce jsou trojího druhu
+
+  * Registr-registr instrukce (RR)
+  * Registr-paměť (RM)
+  * Registr-adresa (RA)
+
+
+^ Op.znak ^ význam ^^
+| **RR instrukce, zapisují se ve formátu například ADD r,s,t** |||
+| HALT | zastavení programu | operandy jsou ignorovány |
+| IN   | čtení vstupu | čtení do ''<nowiki>reg(r)</nowiki>'', ostatní jsou ignorovány |
+| OUT  | výstup   | výpis hodnoty z ''<nowiki>reg(r)</nowiki>'', ostatní jsou ignorovány |
+| ADD  | sčítání  | ''<nowiki>reg(r) = reg(s) + reg(t)</nowiki>'' |
+| SUB  | odčítání | ''<nowiki>reg(r) = reg(s) - reg(t)</nowiki>'' |
+| MUL  | násobení | ''<nowiki>reg(r) = reg(s) * reg(t)</nowiki>'' |
+| DIV  | dělení   | ''<nowiki>reg(r) = reg(s) / reg(t)</nowiki>'' |
+| **RM instrukce, zapisují se ve formátu např LD r,d(s)** |||
+| LD | čtení z paměti  | ''<nowiki>reg(r) = mem(d + reg(s))</nowiki>'' | 
+| ST | zápis do paměti | ''<nowiki>mem(d + reg(s)) = reg(r)</nowiki>'' |
+| **RA instrukce, opět ve formátu LDA r,d(s)** |||
+| LDA  | zápis adresy do paměti (pointer) | ''<nowiki>reg(r) = d+reg(s)</nowiki>''  |
+| LDC  | zápis konstanty do paměti | ''<nowiki>reg(r) = d</nowiki>'', ''reg(s)'' je ignorován |
+| JLT  | podmíněný skok | ''<nowiki>if reg(r)<0 then reg(7) = d + reg(s)</nowiki>'' |
+| JLE  | podmíněný skok | ''<nowiki>if reg(r)<=0 then reg(7) = d + reg(s)</nowiki>'' |
+| JGT  | podmíněný skok | ''<nowiki>if reg(r)>0 then reg(7) = d + reg(s)</nowiki>''  |
+| JGE  | podmíněný skok | ''<nowiki>if reg(r)>=0 then reg(7) = d + reg(s)</nowiki>'' |
+| JEQ  | podmíněný skok | ''<nowiki>if reg(r)==0 then reg(7) = d + reg(s)</nowiki>'' |
+| JNE  | podmíněný skok | ''<nowiki>if reg(r)!=0 then reg(7) = d + reg(s)</nowiki>'' |
+
+
+==== Práce s pamětí ====
+Na začátku běhu programu je datová paměť prázdná, kromě pozice 0, kde je uložena její délka, kterou si program může přečíst.
+
+Proto na začátku ukázkového přeloženého programu vidíme kód
+<code>
+  0:     LD  6,0(0) 
+  1:     ST  0,0(0) 
+</code>
+
+Překladač jazyka Tiny si tu poznamenává velikost hlavní paměti do registru 6. To se bude hodit i nám a to k následujícímu:
+
+Hlavní paměť potřebujeme ke dvěma účelům:
+  - uložení deklarovaných proměnných. 
+  - uložení pomocných proměnných např. při výpočtu složitých výrazů
+
+Deklarované proměnné můžeme ukládat na paměťová místa od začátku paměti. Jelikož se v paměťových operacích uvádí bázický registr (ten v závorce), jehož hodnota se doplňuje přímo zapsaným offsetem, musíme si tento počátek někam napsat, např. do registru číslo 5. Umístění v paměti vůči tomuto offsetu (tj, argument ''d'' LD/ST instrukce) pak získáme při překladu z tabulky symbolů. Jelikož procesor adresuje po slovech, pozice v paměti inkrementujeme s každou proměnnou o 1.
+
+Pomocné proměnné se nám hodí pro výpočet složitých aritmetických nebo logických výrazů. Jelikož máme omezený počet registrů, ne vždy se nám povede výpočet vměstnat do registrů. Pro počet registrů potřebných k výpočtu výrazu existuje rekurentní pravidlo, které nás zajímá jen u binárních operací (závorky jsou jen prosté kopírování):
+
+  - K načtení číselné hodnoty z konstanty/proměnné potřebujeme 1 registr
+  - U binárního výrazu potřebujeme:
+    - Maximum z počtu registrů potřebných pro výpočet jednoho z podvýrazů, pokud se tento počet liší (nejprve spočteme složitější výraz, výsledek necháme v jednom z registrů, zbývajících ''n-1'' registrů můžeme použít pro výpočet toho jednoduššího).
+    - ''n+1'' registr pro výraz, který má oba podvýrazy stejně složité, tj. je potřeba pro každý ''n'' registrů. Pak si výsledek jednoho podvýrazu necháme v registru a dalších ''n'' potřebujeme na výpočet druhého.
+
+Pokud nám registry nestačí, musíme používat pomocnou paměť. Louden to ve svém překladači provádí uložením výsledku levého podstromu na zásobník, výpočtem pravého podstromu a vyzvednutí výsledku levého podstromu ze zásobníku. Ovšem dělá to i pro triviální případy, např. ''a + b'', kde bychom si vystačili s registry.
+Zásobník na pomocné proměnné lze alokovat od konce paměti, k tomu slouží onen registr 6 a záporné offsety. Tj. dočasné proměnné mají umístění ''-1(6)'', ''-2(6)''. Všimněte si, že ve vzorovém příkladu si program načetl délku paměti do tohoto registru. Alokaci paměťových míst samozřejmě provádí již překladač.
+
+
+==== Formát kódu programu pro Tiny Machine (výstup vaší semestrálky) ====
+
+
+Soubor má formát paměťového image, před samotnou interpretací se nahraje do instrukční paměti celý. To dovoluje generovat řádky strojového kódu do souboru na přeskáčku. Lze tak efektivně generovat skoky v podmíněných blocích a cyklech, u kterých neznáme délku skoku. Vynecháme si na instrukci místo, a v momentě, kdy známe délku skoku, tuto instrukci zapíšeme na současné místo v souboru, nicméně s adresou odpovídající správnému umístění. Viz například instrukce na adrese 13 ve vzorovém příkladu překladače.
+
+
+Výstup vaší semestrálky bude v následujícím formátu:
+<code>
+  0:     LD  6,0(0) 
+  1:     ST  0,0(0) 
+  2:     IN  0,0,0 
+  3:     ST  0,0(5) 
+  4:    LDC  0,0(0) 
+  5:     ST  0,0(6) 
+  6:     LD  0,0(5) 
+...
+</code>
+Číslo před dvojtečkou znamená umístění v paměti. Nedefinované pozice jsou automaticky prázdné a vyhodnoceny jako HALT.
+
+~~DISCUSSION~~
