@@ -5,9 +5,10 @@
 <note warning>Zde bude zadání</note>
 
 ===== Soubory ke stažení a odkazy =====
-  * Torzo semestrálky
+  * Torzo semestrálky FIXME
   * [[http://www.cs.sjsu.edu/~louden/cmptext/|Překladač ke knize Compiler Construction]]
   
+
 ===== Popis architektury Tiny Machine (Louden) =====
 
 Snadný přehled o architektuře dostaneme pohledem do zdrojového kódu interpreteru v souboru ''tm.c''
