@@ -39,8 +39,8 @@ Instrukce jsou trojího druhu
 | LD | čtení z paměti  | ''<nowiki>reg(r) = mem(d + reg(s))</nowiki>'' | 
 | ST | zápis do paměti | ''<nowiki>mem(d + reg(s)) = reg(r)</nowiki>'' |
 | **RA instrukce, opět ve formátu LDA r,d(s)** |||
-| LDA  | zápis adresy do paměti (pointer) | ''<nowiki>reg(r) = d+reg(s)</nowiki>''  |
-| LDC  | zápis konstanty do paměti | ''<nowiki>reg(r) = d</nowiki>'', ''reg(s)'' je ignorován |
+| LDA  | zápis adresy v paměti (pointeru) do registru | ''<nowiki>reg(r) = d+reg(s)</nowiki>''  |
+| LDC  | zápis konstanty do registru | ''<nowiki>reg(r) = d</nowiki>'', ''reg(s)'' je ignorován |
 | JLT  | podmíněný skok | ''<nowiki>if reg(r)<0 then reg(7) = d + reg(s)</nowiki>'' |
 | JLE  | podmíněný skok | ''<nowiki>if reg(r)<=0 then reg(7) = d + reg(s)</nowiki>'' |
 | JGT  | podmíněný skok | ''<nowiki>if reg(r)>0 then reg(7) = d + reg(s)</nowiki>''  |
