@@ -2,10 +2,21 @@
 
 ===== Zadání =====
 
-<note warning>Zde bude zadání</note>
+<note warning>Zadaní bude finální v momentě rozdělení dílčích úkolů mezi jednotlivé studenty. Do té doby se může změnit.</note>
+
+Vytvořte překladač z jazyka Mila do jazyka architektury Tiny Machine (Louden).
+
+Vstupem programu (např. ze souboru) bude zdrojový kód v jazyce Mila.
+
+Výstupem programu (soubor, nebo standardní výstup) bude kód programu ve strojovém kódu pro Tiny Machine, který půjde spustit v interpreteru ''tm.c'', uloženým v balíku s podklady pro semestrálku.
+
+Povinnou součástí vašeho řešení bude implementace jedné přidělené optimalizační techniky (bude rozděleno v pátek).
+
+Pro překlad je vhodné použít front-endu z překladače Mila (viz balík s podklady pro semestrálku). Dále na této stránce naleznete popis architektury Tiny Machine.
 
 ===== Soubory ke stažení a odkazy =====
-  * Torzo semestrálky FIXME
+  * {{:semestral_work:gen-semestralka.zip|Zdrojové kódy torza semestrálky}} - obsahuje kompletní překladač jazyka Mila a interpreter Tiny Machine
+  * {{:semestral_work:gen-mila.pdf|Popis syntaxe jazyka Mila}} (převzato z X36PJP)
   * [[http://www.cs.sjsu.edu/~louden/cmptext/|Překladač ke knize Compiler Construction]]
   
 
