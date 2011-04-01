@@ -4,23 +4,32 @@
 
 <note warning>Zadaní bude finální v momentě rozdělení dílčích úkolů mezi jednotlivé studenty. Do té doby se může změnit.</note>
 
-Vytvořte překladač z jazyka Mila do jazyka architektury Tiny Machine (Louden).
+Vytvořte překladač z jazyka Mila do jazyka architektury virtuálního počítače Tiny Machine (viz take [[http://www.cs.sjsu.edu/~louden/cmptext/|Překladač ke knize Compiler Construction]]).
 
-Vstupem programu (např. ze souboru) bude zdrojový kód v jazyce Mila.
+Vstupem programu ze standardniho vstupu bude zdrojový kód v jazyce Mila.
 
-Výstupem programu (soubor, nebo standardní výstup) bude kód programu ve strojovém kódu pro Tiny Machine, který půjde spustit v interpreteru ''tm.c'', uloženým v balíku s podklady pro semestrálku.
+Výstupem programu na standardní výstup bude kód programu v asembleru pro Tiny Machine, který půjde spustit v interpreteru ''tm.c'', uloženém v balíku s podklady pro semestrálku.
 
-Povinnou součástí vašeho řešení bude implementace jedné přidělené optimalizační techniky (bude rozděleno v pátek).
+Povinnou součástí vašeho řešení bude implementace podle specifikace zadání pro jednotlivé studenty.
 
-Pro překlad je vhodné použít front-endu z překladače Mila (viz balík s podklady pro semestrálku). Dále na této stránce naleznete popis architektury Tiny Machine.
+Pro překlad doporučujeme využít  (s případnými modifikacemi) některý z existujících front-endů překladače Mila (viz balík s podklady pro semestrálku). Dále na této stránce naleznete popis jednotlivých zadáni a popis architektury Tiny Machine.
 
 ===== Soubory ke stažení a odkazy =====
   * {{:semestral_work:gen-semestralka.zip|Zdrojové kódy torza semestrálky}} - obsahuje kompletní překladač jazyka Mila a interpreter Tiny Machine
   * {{:semestral_work:gen-mila.pdf|Popis syntaxe jazyka Mila}} (převzato z X36PJP)
   * [[http://www.cs.sjsu.edu/~louden/cmptext/|Překladač ke knize Compiler Construction]]
+
+
+
+===== Přehled zadání  =====
+
+1. Optimalizujte používání registrů při výpočtu výrazů.
+
+2. Optimalizujte používání cyklů přesunutím invariantů mimo tělo cyklu.  
+
   
 
-===== Popis architektury Tiny Machine (Louden) =====
+===== Popis architektury Tiny Machine  =====
 
 Snadný přehled o architektuře dostaneme pohledem do zdrojového kódu interpreteru v souboru ''tm.c''
 
