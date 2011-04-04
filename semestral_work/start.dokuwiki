@@ -1,33 +1,56 @@
 ====== Semestrální práce ======
 
-===== Zadání =====
+===== Zadání celkově =====
 
-<note warning>Zadaní bude finální v momentě rozdělení dílčích úkolů mezi jednotlivé studenty. Do té doby se může změnit.</note>
+<note warning>Zde se nejpozději do konce uterka 5.4.2011 objeví kompletní zadání semestrální práce. Zároveň napíšeme všem studentům email a smažeme tuto poznámku. </note>
 
-Vytvořte překladač z jazyka Mila do jazyka architektury virtuálního počítače Tiny Machine (viz take [[http://www.cs.sjsu.edu/~louden/cmptext/|Překladač ke knize Compiler Construction]]).
+Vytvořte překladač z jazyka Mila do jazyka architektury virtuálního počítače Tiny Machine (viz take [[http://www.cs.sjsu.edu/~louden/cmptext/|překladač ke knize Compiler Construction]]).
 
-Vstupem programu ze standardniho vstupu bude zdrojový kód v jazyce Mila.
+Vstupem Vašeho programu ze standardniho vstupu bude zdrojový kód v jazyce Mila.
 
-Výstupem programu na standardní výstup bude kód programu v asembleru pro Tiny Machine, který půjde spustit v interpreteru ''tm.c'', uloženém v balíku s podklady pro semestrálku.
+Výstupem Vašeho programu na standardní výstup bude kód programu v asembleru pro Tiny Machine, který půjde spustit v interpreteru ''tm.c'', uloženém v balíku s podklady pro semestrálku.
 
-Povinnou součástí vašeho řešení bude implementace podle specifikace zadání pro jednotlivé studenty.
+Níže v textu jsou specifikovány podrobnosti tří konkrétních zadání, které zahrnují překlad používající optimalizace, výběr cílových instrukcí a/nebo efektivní přidělování registrů. Každý ze studentů si vybere jedno z těchto zadání podle svého uvážení a zájmu. Zároveň u jednotlivých zadání je specifikován způsob hodnocení výsledné práce s maximálními počty bodů.  
 
-Pro překlad doporučujeme využít  (s případnými modifikacemi) některý z existujících front-endů překladače Mila (viz balík s podklady pro semestrálku). Dále na této stránce naleznete popis jednotlivých zadáni a popis architektury Tiny Machine.
+Pro vypracování semestrální práce doporučujeme využít a případně podle sebe modifikovat již existující front-end překladače Mila, viz balík s podklady pro semestrálku.
 
-===== Soubory ke stažení a odkazy =====
-  * {{:semestral_work:gen-semestralka.zip|Zdrojové kódy torza semestrálky}} - obsahuje kompletní překladač jazyka Mila a interpreter Tiny Machine
-  * {{:semestral_work:gen-mila.pdf|Popis syntaxe jazyka Mila}} (převzato z X36PJP)
-  * [[http://www.cs.sjsu.edu/~louden/cmptext/|Překladač ke knize Compiler Construction]]
+Termíny pro odevzdání práce jsou následující:
+
+  * do 5.6.2011 (student může za semestrálku získat plný počet bodů)
+
+  * od 6.6.2011 do konce zkouškového (bude uplatněna penalizace odečtem 50 procent ze získaných bodů) 
+ 
+
+Do 1.5.2011 každý ze studentů oznámí emailem přednášejícímu nebo cvičícímu, které ze 3 zadání si vybral.
 
 
+Dále na této stránce naleznete popis jednotlivých zadáni, soubory ke stažení a popis architektury Tiny Machine.
 
-===== Přehled zadání  =====
 
-1. Optimalizujte používání registrů při výpočtu výrazů.
+===== Přehled jednotlivých zadání a bodového hodnocení =====
 
-2. Optimalizujte používání cyklů přesunutím invariantů mimo tělo cyklu.  
+Překladač výtváří korektní cílový kód z pohledu funkčnosti -  max. 10 b.  
+
+**Jednotlivá zadání:**
+
+1.  
+  * Optimalizujte společné podvýrazy v rámci jednoho výrazu -   max. 7 b.
+  * Optimalizujte používání cyklů přesunutím invariantů (konstantních výrazů) mimo tělo cyklu -  max. 6 b. 
+2. 
+  * Optimalizujte používání registrů tak, aby dostupné registry byly maximálně využity, v rámci celého programu - max. 13b.
+  * Případně (pokud by se Vam zadání předchozí věty zdálo obtížné), optimalizujte používání registrů tak, aby dostupné registry byly maximálně využity, v rámci výrazů - max.    6b.
+3.
+  * Implementujte výběr instrukcí Graham-Glanvillovou technikou nebo pomocí vyhledávání vzorků a dynamického programování (uvažujte následující ceny instrukcí: cena instrukce bez přístupu do hlavní paměti (tj. používající pouze registry) bude 1, ceny instrukce s přístupem do hlavní paměti bude 2). 
 
   
+
+
+===== Soubory ke stažení =====
+  * {{:semestral_work:gen-semestralka.zip|Zdrojové kódy torza semestrálky}} - obsahuje kompletní překladač jazyka Mila a interpreter Tiny Machine
+  * {{:semestral_work:gen-mila.pdf|Popis syntaxe jazyka Mila}} (převzato z X36PJP)
+
+
+
 
 ===== Popis architektury Tiny Machine  =====
 
@@ -93,7 +116,7 @@ Pomocné proměnné se nám hodí pro výpočet složitých aritmetických nebo 
     - Maximum z počtu registrů potřebných pro výpočet jednoho z podvýrazů, pokud se tento počet liší (nejprve spočteme složitější výraz, výsledek necháme v jednom z registrů, zbývajících ''n-1'' registrů můžeme použít pro výpočet toho jednoduššího).
     - ''n+1'' registr pro výraz, který má oba podvýrazy stejně složité, tj. je potřeba pro každý ''n'' registrů. Pak si výsledek jednoho podvýrazu necháme v registru a dalších ''n'' potřebujeme na výpočet druhého.
 
-Pokud nám registry nestačí, musíme používat pomocnou paměť. Louden to ve svém překladači provádí uložením výsledku levého podstromu na zásobník, výpočtem pravého podstromu a vyzvednutí výsledku levého podstromu ze zásobníku. Ovšem dělá to i pro triviální případy, např. ''a + b'', kde bychom si vystačili s registry.
+Pokud nám registry nestačí, musíme používat pomocnou paměť. Pozn. profesor Louden to ve svém překladači, (viz take [[http://www.cs.sjsu.edu/~louden/cmptext/|překladač ke knize Compiler Construction]]), provádí uložením výsledku levého podstromu na zásobník, výpočtem pravého podstromu a vyzvednutí výsledku levého podstromu ze zásobníku. Ovšem dělá to i pro triviální případy, např. ''a + b'', kde bychom si vystačili s registry.
 Zásobník na pomocné proměnné lze alokovat od konce paměti, k tomu slouží onen registr 6 a záporné offsety. Tj. dočasné proměnné mají umístění ''-1(6)'', ''-2(6)''. Všimněte si, že ve vzorovém příkladu si program načetl délku paměti do tohoto registru. Alokaci paměťových míst samozřejmě provádí již překladač.
 
 
