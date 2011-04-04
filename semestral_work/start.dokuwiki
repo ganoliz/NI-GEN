@@ -13,6 +13,7 @@ Výstupem Vašeho programu na standardní výstup bude kód programu v asembleru
 Níže v textu jsou specifikovány podrobnosti tří konkrétních zadání, které zahrnují překlad používající optimalizace, výběr cílových instrukcí a/nebo efektivní přidělování registrů. Každý ze studentů si vybere jedno z těchto zadání podle svého uvážení a zájmu. Zároveň u jednotlivých zadání je specifikován způsob hodnocení výsledné práce s maximálními počty bodů.  
 
 Pro vypracování semestrální práce doporučujeme využít a případně podle sebe modifikovat již existující front-end překladače Mila, viz balík s podklady pro semestrálku.
+Tento front-end již obsahuje optimalizaci výpočtu konstantních výrazů.
 
 Termíny pro odevzdání práce jsou následující:
 
@@ -29,18 +30,18 @@ Dále na této stránce naleznete popis jednotlivých zadáni, soubory ke staže
 
 ===== Přehled jednotlivých zadání a bodového hodnocení =====
 
-Překladač výtváří korektní cílový kód z pohledu funkčnosti -  max. 10 b.  
+Překladač vytváří korektní cílový kód z pohledu funkčnosti -  max. 10 b.  
 
 **Jednotlivá zadání:**
 
 1.  
   * Optimalizujte společné podvýrazy v rámci jednoho výrazu -   max. 7 b.
-  * Optimalizujte používání cyklů přesunutím invariantů (konstantních výrazů) mimo tělo cyklu -  max. 6 b. 
+  * Optimalizujte používání cyklů přesunutím invariantů mimo tělo cyklu -  max. 6 b. 
 2. 
   * Optimalizujte používání registrů tak, aby dostupné registry byly maximálně využity, v rámci celého programu - max. 13b.
-  * Případně (pokud by se Vam zadání předchozí věty zdálo obtížné), optimalizujte používání registrů tak, aby dostupné registry byly maximálně využity, v rámci výrazů - max.    6b.
+  * Případně (pokud by se Vam zadání předchozí věty zdálo obtížné), optimalizujte používání registrů tak, aby dostupné registry byly maximálně využity, v rámci výrazů - max. 6b.
 3.
-  * Implementujte výběr instrukcí Graham-Glanvillovou technikou nebo pomocí vyhledávání vzorků a dynamického programování (uvažujte následující ceny instrukcí: cena instrukce bez přístupu do hlavní paměti (tj. používající pouze registry) bude 1, ceny instrukce s přístupem do hlavní paměti bude 2). 
+  * Implementujte výběr instrukcí Graham-Glanvillovou technikou nebo pomocí vyhledávání vzorků a dynamického programování (uvažujte následující ceny instrukcí: cena instrukce bez přístupu do hlavní paměti (tj. používající pouze registry, RA a RM instrukce) bude 1, ceny instrukce s přístupem do hlavní paměti (RM instrukce) bude 2). 
 
   
 
@@ -75,6 +76,7 @@ Instrukce jsou trojího druhu
 | IN   | čtení vstupu | čtení do ''<nowiki>reg(r)</nowiki>'', ostatní jsou ignorovány |
 | OUT  | výstup   | výpis hodnoty z ''<nowiki>reg(r)</nowiki>'', ostatní jsou ignorovány |
 | ADD  | sčítání  | ''<nowiki>reg(r) = reg(s) + reg(t)</nowiki>'' |
+| ADDI | inkrementace o 1  | ''<nowiki>reg(r) = reg(r) + 1</nowiki>'', ostatní jsou ignorovány |
 | SUB  | odčítání | ''<nowiki>reg(r) = reg(s) - reg(t)</nowiki>'' |
 | MUL  | násobení | ''<nowiki>reg(r) = reg(s) * reg(t)</nowiki>'' |
 | DIV  | dělení   | ''<nowiki>reg(r) = reg(s) / reg(t)</nowiki>'' |
