@@ -76,7 +76,7 @@ Instrukce jsou trojího druhu
 | IN   | čtení vstupu | čtení do ''<nowiki>reg(r)</nowiki>'', ostatní jsou ignorovány |
 | OUT  | výstup   | výpis hodnoty z ''<nowiki>reg(r)</nowiki>'', ostatní jsou ignorovány |
 | ADD  | sčítání  | ''<nowiki>reg(r) = reg(s) + reg(t)</nowiki>'' |
-| ADDI | inkrementace o 1  | ''<nowiki>reg(r) = reg(r) + 1</nowiki>'', ostatní jsou ignorovány |
+| INC  | inkrementace o 1  | ''<nowiki>reg(r) = reg(r) + 1</nowiki>'', ostatní jsou ignorovány |
 | SUB  | odčítání | ''<nowiki>reg(r) = reg(s) - reg(t)</nowiki>'' |
 | MUL  | násobení | ''<nowiki>reg(r) = reg(s) * reg(t)</nowiki>'' |
 | DIV  | dělení   | ''<nowiki>reg(r) = reg(s) / reg(t)</nowiki>'' |
@@ -140,5 +140,7 @@ Výstup vaší semestrálky bude v následujícím formátu:
 ...
 </code>
 Číslo před dvojtečkou znamená umístění v paměti. Nedefinované pozice jsou automaticky prázdné a vyhodnoceny jako HALT.
+
+Řádky začínající symbolem hvězdičky (*) značí komentáře.
 
 ~~DISCUSSION~~
