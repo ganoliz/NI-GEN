@@ -45,7 +45,7 @@ Překladač vytváří korektní cílový kód z pohledu funkčnosti a použív�
 
 
 ===== Soubory ke stažení =====
-  * {{:semestral_work:gen-semestralka.zip|Zdrojové kódy torza semestrálky}} - obsahuje kompletní překladač jazyka Mila a interpreter Tiny Machine
+  * {{:semestral_work:gen-semestralka.zip|Zdrojové kódy torza semestrálky}} - obsahuje kompletní překladač jazyka Mila a interpreter Tiny Machine (POZOR: interpreter je modifikovaný oproti originálu o novou instrukci)
   * {{:semestral_work:gen-mila.pdf|Popis syntaxe jazyka Mila}} (převzato z X36PJP)
 
 
