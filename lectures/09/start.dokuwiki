@@ -1,2 +1,2 @@
-====== 9. Komplexní příklad demonstrující překlad vstupního programu do cílového asembleru.  ======
+====== 9. Komplexní příklad s výběrem instrukcí, alokací registrů a optimalizacemi demonstrující překlad vstupního programu do cílového asembleru.  ======
   * [[..:solutions:09:start]]
