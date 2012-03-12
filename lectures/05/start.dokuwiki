@@ -1,4 +1,4 @@
-====== 5. Vlastnosti a generování cílového kódu, úvod do problému výběru instrukcí ======
+====== 5. Generování cílového kódu: Úvod do problému výběru instrukcí na základě AST, Graham-Glanvillova metoda - úvod ======
   * [[..:solutions:05:start]]
 
 {{:gen-lecture5.pdf|}}
