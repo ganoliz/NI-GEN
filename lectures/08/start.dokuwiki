@@ -1,5 +1,4 @@
-====== 8. Úvod do problému optimalizací, konverze 3AC <-> AST (DAG), lokální optimalizace v rámci základního bloku ======
+====== 8. Optimalizace: úvod, konverze 3AC <-> AST, lokální optimalizace v rámci základního bloku ======
   * [[..:solutions:08:start]]
 
 
-{{:lectures:08:gen-lecture8.pdf|}}
