@@ -15,9 +15,9 @@ Tento front-end již obsahuje optimalizaci výpočtu konstantních výrazů.
 
 Termíny pro odevzdání práce jsou následující:
 
-  * do 5.6.2011 (student může za semestrálku získat plný počet bodů)
+  * do 3.6.2011 (student může za semestrálku získat plný počet bodů)
 
-  * od 6.6.2011 do konce zkouškového (bude uplatněna penalizace odečtem 50 procent ze získaných bodů) 
+  * od 4.6.2011 do konce zkouškového (bude uplatněna penalizace odečtem 50 procent ze získaných bodů) 
  
 
 Do 1.5.2011 každý ze studentů oznámí emailem přednášejícímu nebo cvičícímu, které ze 3 zadání si vybral.
@@ -33,13 +33,13 @@ Překladač vytváří korektní cílový kód z pohledu funkčnosti a použív�
 **Jednotlivá zadání:**
 
 1.  
-  * Optimalizujte společné podvýrazy v rámci jednoho výrazu -   max. 8 b.
-  * Optimalizujte používání cyklů přesunutím invariantů mimo tělo cyklu -  max. 7 b. 
+  * Optimalizujte společné podvýrazy v rámci jednoho výrazu -   max. 10 b.
+  * Optimalizujte používání cyklů přesunutím invariantů mimo tělo cyklu -  max. 10 b. 
 2. 
-  * Optimalizujte používání registrů tak, aby dostupné registry byly maximálně využity, v rámci celého programu - max. 15b.
-  * Případně (pokud by se Vam zadání předchozí věty zdálo obtížné), optimalizujte používání registrů tak, aby dostupné registry byly maximálně využity, v rámci výrazů - max. 7b.
+  * Optimalizujte používání registrů tak, aby dostupné registry byly maximálně využity, v rámci celého programu - max. 20b.
+  * Případně (pokud by se Vam zadání předchozí věty zdálo obtížné), optimalizujte používání registrů tak, aby dostupné registry byly maximálně využity, v rámci výrazů - max. 10b.
 3.
-  * Implementujte výběr instrukcí Graham-Glanvillovou technikou nebo pomocí vyhledávání vzorků a dynamického programování (uvažujte následující ceny instrukcí: cena instrukce bez přístupu do hlavní paměti (tj. používající pouze registry, RA a RM instrukce) bude 1, ceny instrukce s přístupem do hlavní paměti (RM instrukce) bude 2) - max. 15 b. 
+  * Implementujte výběr instrukcí Graham-Glanvillovou technikou nebo pomocí vyhledávání vzorků a dynamického programování (uvažujte následující ceny instrukcí: cena instrukce bez přístupu do hlavní paměti (tj. používající pouze registry, RA a RM instrukce) bude 1, ceny instrukce s přístupem do hlavní paměti (RM instrukce) bude 2) - max. 20 b. 
 
   
 
