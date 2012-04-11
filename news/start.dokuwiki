@@ -4,3 +4,8 @@
 
 {{autoarchive>news}}
 
+Zapoctovy test se bude psat na prednasce dne 23.4. Temata k testu jsou nasledujici:
+  * vnitrni formy: AST a 3AC, metody jejich generovani
+  * vyber instrukci pomoci pokryvani AST
+  * alokace registru
+  * lokalni optimalizace
