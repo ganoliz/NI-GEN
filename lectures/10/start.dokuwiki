@@ -1,2 +1,4 @@
-====== 10. Globální optimalizace ======
+====== 10. Paralelismus na úrovni instrukcí, pipelining ======
   * [[..:solutions:10:start]]
+
+{{:lectures:10:gen-prednaska10.pdf|}}
