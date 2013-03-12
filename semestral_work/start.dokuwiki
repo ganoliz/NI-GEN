@@ -75,6 +75,9 @@ Instrukce jsou trojího druhu
 | OUT  | výstup   | výpis hodnoty z ''<nowiki>reg(r)</nowiki>'', ostatní jsou ignorovány |
 | ADD  | sčítání  | ''<nowiki>reg(r) = reg(s) + reg(t)</nowiki>'' |
 | INC((Pozor, nenachází se v originální verzi interpreteru, je potřeba použít interpreter z našeho balíku)) | inkrementace o 1  | ''<nowiki>reg(r) = reg(r) + 1</nowiki>'', ostatní jsou ignorovány |
+| DEC((Pozor, nenachází se v originální verzi interpreteru, je potřeba použít interpreter z našeho balíku)) | dekrementace o 1  | ''<nowiki>reg(r) = reg(r) + 1</nowiki>'', ostatní jsou ignorovány |
+| SHR((Pozor, nenachází se v originální verzi interpreteru, je potřeba použít interpreter z našeho balíku)) | shift doprava  | ''<nowiki>reg(r) = reg(r) >> s</nowiki>'', ostatní jsou ignorovány |
+| SHL((Pozor, nenachází se v originální verzi interpreteru, je potřeba použít interpreter z našeho balíku)) | shift doleva  | ''<nowiki>reg(r) = reg(r) << s</nowiki>'', ostatní jsou ignorovány |
 | SUB  | odčítání | ''<nowiki>reg(r) = reg(s) - reg(t)</nowiki>'' |
 | MUL  | násobení | ''<nowiki>reg(r) = reg(s) * reg(t)</nowiki>'' |
 | DIV  | dělení   | ''<nowiki>reg(r) = reg(s) / reg(t)</nowiki>'' |
@@ -90,7 +93,6 @@ Instrukce jsou trojího druhu
 | JGE  | podmíněný skok | ''<nowiki>if reg(r)>=0 then reg(7) = d + reg(s)</nowiki>'' |
 | JEQ  | podmíněný skok | ''<nowiki>if reg(r)==0 then reg(7) = d + reg(s)</nowiki>'' |
 | JNE  | podmíněný skok | ''<nowiki>if reg(r)!=0 then reg(7) = d + reg(s)</nowiki>'' |
-
 
 ==== Práce s pamětí ====
 Na začátku běhu programu je datová paměť prázdná, kromě pozice 0, kde je uložena její délka, kterou si program může přečíst.
