@@ -33,10 +33,44 @@ Překladač vytváří korektní cílový kód z pohledu funkčnosti a použív�
 **Jednotlivá zadání:**
 
 1.  
-  * Optimalizujte společné podvýrazy v rámci jednoho výrazu -   max. 10 b.
-  * Optimalizujte používání cyklů přesunutím invariantů mimo tělo cyklu -  max. 10 b. 
+  * Optimalizujte společné podvýrazy v rámci jednoho výrazu - max. 10 b.
+    * Ukázka 1: (a + b) + (a + b) + (b + a) * ( (a * b) + (b * a) ) + (a * b) + (c + a + b) - optimalizace musí detekovat všechny společné podvýrazy, bez ohledu na pořadí proměnných, proměnnou navíc, atd.
+    * Ukázka 2:<code>
+var i,j,x,y,a,b,c,d,e,f,g,h;
+begin
+a := 1;
+b := 2;
+c := 3;
+d := 4;
+e := 5;
+f := 3;
+g := 2;
+h := 1;
+{read a;
+read b;
+read c;
+read d;
+read e;
+read f;
+read g;
+read h;}
+x := 0;
+y := (((((x+a)*(x+b))*((x+c)*(x+d)) * ((x+e)*(x+f))*((x+g)*(x+h))) * (((a+x)*(b+x))*((c+x)*(d+x)) * ((e+x)*(f+x))*((g+x)*(h+x))))
+    + ((((x-a)*(x-b))*((x-c)*(x-d)) * ((x-e)*(x-f))*((x-g)*(x-h))) * (((a-x)*(b-x))*((c-x)*(d-x)) * ((e-x)*(f-x))*((g-x)*(h-x)))))
+  + (((((a+x)*(x+b))*((x+c)*(x+d)) * ((x+e)*(x+f))*((x+g)*(x+h))) * (((a+x)*(b+x))*((c+x)*(d+x)) * ((e+x)*(f+x))*((g+x)*(h+x))))
+      + ((((x-a)*(x-b))*((x-c)*(x-d)) * ((x-e)*(x-f))*((x-g)*(x-h))) * (((a-x)*(b-x))*((c-x)*(d-x)) * ((e-x)*(f-x))*((g-x)*(h-x)))));
+i := ((x+a)*(x+b))*((x+c)*(x+d)) * ((x+e)*(x+f))*((x+g)*(x+h));
+j := ((a+x)*(b+x))*((c+x)*(d+x)) * ((e+x)*(f+x))*((g+x)*(h+x));
+y := i * j;
+write i;
+write j;
+write y;
+end
+</code>
+
+  * Optimalizujte používání cyklů přesunutím invariantů mimo tělo cyklu -  max. 10 b.
 2. 
-  * Optimalizujte používání registrů tak, aby dostupné registry byly maximálně využity, v rámci celého programu - max. 20b.
+  * Optimalizujte používání registrů tak, aby dostupné registry byly maximálně využity, v rámci celého programu - max. 20b. Práce bude hodnocena podle kvality optimalizace.
   * Případně (pokud by se Vam zadání předchozí věty zdálo obtížné), optimalizujte používání registrů tak, aby dostupné registry byly maximálně využity, v rámci výrazů - max. 10b.
 3.
   * Implementujte výběr instrukcí Graham-Glanvillovou technikou nebo pomocí vyhledávání vzorků a dynamického programování (uvažujte následující ceny instrukcí: cena instrukce bez přístupu do hlavní paměti (tj. používající pouze registry, RA a RM instrukce) bude 1, ceny instrukce s přístupem do hlavní paměti (RM instrukce) bude 2) - max. 20 b. 
