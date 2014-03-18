@@ -25,6 +25,9 @@ Do 1.5.2014 každý ze studentů oznámí emailem přednášejícímu nebo cvič
 
 Dále na této stránce naleznete popis jednotlivých zadáni, soubory ke stažení a popis architektury Tiny Machine.
 
+===== Ovládání =====
+Práce splňuje následující ovládání:
+  * ./mila -o target.tm src.mila
 
 ===== Přehled jednotlivých zadání a bodového hodnocení =====
 
