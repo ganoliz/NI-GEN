@@ -2,16 +2,18 @@
 
 ===== Zadání celkově =====
 
-Vytvořte překladač z jazyka Mila do jazyka architektury virtuálního počítače Tiny Machine (viz take [[http://www.cs.sjsu.edu/~louden/cmptext/|překladač ke knize Compiler Construction]]).
+Vytvořte překladač z jazyka Mila do jazyka architektury virtuálního počítače Tiny Machine (viz take [[http://www.cs.sjsu.edu/~louden/cmptext/|překladač ke knize Compiler Construction]]). Tiny machine byl upraven aby podporoval některé instrukce navíc, jmenovitě INC, DEC (pro optimalizace pokrýváním instrukcemi) a IN (pro podporu read).
 
-Vstupem Vašeho programu ze standardniho vstupu bude zdrojový kód v jazyce Mila.
+Vstupem Vašeho programu bude zdrojový kód v jazyce Mila.
 
-Výstupem Vašeho programu na standardní výstup bude kód programu v asembleru pro Tiny Machine, který půjde spustit v interpreteru ''tm.c'', uloženém v balíku s podklady pro semestrálku.
+Výstupem Vašeho programu bude kód programu v asembleru pro Tiny Machine, který půjde spustit v interpreteru ''tm.c'', uloženém v balíku s podklady pro semestrálku.
+
+Olvádání programu je popsáno v sekci ovládání.
 
 Níže v textu jsou specifikovány podrobnosti tří konkrétních zadání, které zahrnují překlad používající optimalizace, výběr cílových instrukcí a/nebo efektivní přidělování registrů. Každý ze studentů si vybere jedno z těchto zadání podle svého uvážení a zájmu. Zároveň u jednotlivých zadání je specifikován způsob hodnocení výsledné práce s maximálními počty bodů.  
 
 Pro vypracování semestrální práce doporučujeme využít a případně podle sebe modifikovat již existující front-end překladače Mila, viz balík s podklady pro semestrálku.
-Tento front-end již obsahuje optimalizaci výpočtu konstantních výrazů.
+Tento front-end již obsahuje optimalizaci výpočtu konstantních výrazů. Ukázkový front-end neobsahuje konstrukci read pro čtení ze standardního vstupu.
 
 Termíny pro odevzdání práce jsou následující:
 
@@ -20,14 +22,17 @@ Termíny pro odevzdání práce jsou následující:
   * od 9.6.2014 do konce zkouškového (bude uplatněna penalizace odečtem 50 procent ze získaných bodů) 
  
 
-Do 1.5.2014 každý ze studentů oznámí emailem přednášejícímu nebo cvičícímu, které ze 3 zadání si vybral.
-
+Do 1.5.2014 každý ze studentů oznámí emailem přednášejícímu nebo cvičícímu, které ze 3 zadání si vybral. Cvičící na tento email typicky neodpovídá. Individuálně je možné dohodnout speciální (typicky obtížnější) zadání.
 
 Dále na této stránce naleznete popis jednotlivých zadáni, soubory ke stažení a popis architektury Tiny Machine.
 
-===== Ovládání =====
+===== Ovládání překladače =====
 Práce splňuje následující ovládání:
-  * ./mila -o target.tm src.mila
+  * ./mila -o target.tm src.mila - výstup do souboru
+  * ./mila src.mila - výstup do stdout
+  * ./mila - vstup na stdin, výstup na stdout	 
+
+Název spustitelného souboru překladače nechť je mila.
 
 ===== Přehled jednotlivých zadání a bodového hodnocení =====
 
@@ -84,7 +89,7 @@ end
 ===== Soubory ke stažení =====
   * {{:semestral_work:gen-semestralka.zip|Zdrojové kódy torza semestrálky}} - obsahuje kompletní překladač jazyka Mila a interpreter Tiny Machine (POZOR: interpreter je modifikovaný oproti originálu o novou instrukci)
   * {{:semestral_work:gen-semestralka.tar.gz|Nové zdrojové kódy torza semestrálky}} - obsahuje kompletní překladač jazyka Mila a interpreter Tiny Machine (POZOR: interpreter je modifikovaný oproti originálu o novou instrukci)
-  * {{:semestral_work:gen-mila.pdf|Popis syntaxe jazyka Mila}} (převzato z X36PJP)
+  * {{:semestral_work:gen-mila.pdf|Popis syntaxe jazyka Mila}} (převzato z PJP, pro potřeby předmětu MI-GEN je třeba přidat navíc instrukci read pro čtení ze standardního vstupu, syntaxe je shodná s instrukcí write)
 
 
 
@@ -120,7 +125,7 @@ Instrukce jsou trojího druhu
 | DIV  | dělení   | ''<nowiki>reg(r) = reg(s) / reg(t)</nowiki>'' |
 | **RM instrukce, zapisují se ve formátu např LD r,d(s)** |||
 | LD | čtení z paměti  | ''<nowiki>reg(r) = mem(d + reg(s))</nowiki>'' | 
-| ST | zápis do paměti | ''<nowiki>mem(d + reg(s)) = reg(r)</nowiki>'' |
+| ST | zápis do paměti | ''<nowiki>mem(d + reg(s)) = reg(r)</nowik>'' |
 | **RA instrukce, opět ve formátu LDA r,d(s)** |||
 | LDA  | zápis adresy v paměti (pointeru) do registru | ''<nowiki>reg(r) = d+reg(s)</nowiki>''  |
 | LDC  | zápis konstanty do registru | ''<nowiki>reg(r) = d</nowiki>'', ''reg(s)'' je ignorován |
