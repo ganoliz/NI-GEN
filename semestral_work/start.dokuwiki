@@ -28,11 +28,19 @@ Dále na této stránce naleznete popis jednotlivých zadáni, soubory ke staže
 
 ===== Ovládání překladače =====
 Práce splňuje následující ovládání:
-  * ./mila -o target.tm src.mila - výstup do souboru
-  * ./mila src.mila - výstup do stdout
-  * ./mila - vstup na stdin, výstup na stdout	 
+  * ./mila2tm -o target.tm src.mila - výstup do souboru
+  * ./mila2tm src.mila - výstup do stdout
+  * ./mila2tm - vstup na stdin, výstup na stdout
+  * Možnosti souborů a standardních io je možné kombinovat.
 
-Název spustitelného souboru překladače nechť je mila.
+Název spustitelného souboru překladače nechť je mila2tm (platí až od roku 2015).
+
+===== Způsob odevzdání (2015) =====
+  * Práci odevzdávejte v archivu vaslogin.tar.gz.
+  * V archivu ať je hlavní adresář vaslogin.
+  * Zdrojové kódy musí být kompilovatelné pomocí Makefile nebo jiné obdobné alternativy pokud používáte jiný programovací jazyk než C/C++.
+  * Zdrojové kódy musí být kompilovatelné na operačním systému Linux.
+  * Binrání program musí být umístěn uvnitř archivu v vaslogin/bin/mila2tm.
 
 ===== Přehled jednotlivých zadání a bodového hodnocení =====
 
