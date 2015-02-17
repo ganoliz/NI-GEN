@@ -17,41 +17,77 @@ Tento front-end již obsahuje optimalizaci výpočtu konstantních výrazů. Uk�
 
 Termíny pro odevzdání práce jsou následující:
 
-  * do 8.6.2014 (student může za semestrálku získat plný počet bodů)
+  * do 5.6.2015 (student může za semestrálku získat plný počet bodů)
 
-  * od 9.6.2014 do konce zkouškového (bude uplatněna penalizace odečtem 50 procent ze získaných bodů) 
+  * od 5.6.2015 do konce zkouškového (bude uplatněna penalizace odečtem 50 procent ze získaných bodů) 
  
 
-Do 1.5.2014 každý ze studentů oznámí emailem přednášejícímu nebo cvičícímu, které ze 3 zadání si vybral. Cvičící na tento email typicky neodpovídá. Individuálně je možné dohodnout speciální (typicky obtížnější) zadání.
+Do 1.5.2015 každý ze studentů odešla email s adresou repozitáře cvičícímu, viz níže. Cvičící na tento email typicky neodpovídá. Individuálně je možné dohodnout speciální (typicky obtížnější) zadání.
 
 Dále na této stránce naleznete popis jednotlivých zadáni, soubory ke stažení a popis architektury Tiny Machine.
 
-===== Ovládání překladače =====
-Práce splňuje následující ovládání:
+===== Struktura překladače, jeho ovládání a odevzdávání =====
+
+Pokud nemáte GitLab účet, vytvořte si jej na: https://gitlab.fit.cvut.cz. Alernativně je možné použít git platformu dle vaší volby.
+
+Vašemu repozitáři přidejte deployment klíč: {{:semestral_work:id_rsa.pub.gz|}}
+
+Z Vaší fakultní emailové adresy pošlete mail (na radomir.polach@fit.cvut.cz) s předmětem "MI-GEN 2015 Repository", který bude obsahovat v (text) body URL Vašeho repozitáře, např.: git@gitlab.fit.cvut.cz:login/repo_name.git
+
+Kompilace Vaší práce musí být možná pomocí přidaného Makefile na platformě GNU Linux.
+
+Struktura odevzdávaného překladače (root repozitáře větve master):
+  * Makefile
+  * type - soubor obsahující typ zadání, tj. hodnota 1,2 nebo 3
+  * src/ - zdrojové kódy
+  * bin/ - obsahuje program překladače, knihovny atd. vytvořené při koompilace pomocí Makefile
+  * bin/mila2tm - binární program překladače, případně wrapper script
+  * doc/ - dokuemntace
+
+Přeladač splňuje následující ovládání:
   * ./mila2tm -o target.tm src.mila - výstup do souboru
   * ./mila2tm src.mila - výstup do stdout
+  * ./mila2tm -o target.tm - výstup te stdin
   * ./mila2tm - vstup na stdin, výstup na stdout
-  * Možnosti souborů a standardních io je možné kombinovat.
+  * Možnosti souborů a standardních io je možné libovolně kombinovat.
 
-Název spustitelného souboru překladače nechť je mila2tm (platí až od roku 2015).
+Název spustitelného souboru překladače nechť je mila2tm, pokud je používán nějaký specializovaný jazyk je třeba, aby byl dostupný wrapper skript, který má schodné ovládání.
 
-===== Způsob odevzdání (2015) =====
-  * Práci odevzdávejte v archivu vaslogin.tar.gz.
-  * V archivu ať je hlavní adresář vaslogin.
-  * Zdrojové kódy musí být kompilovatelné pomocí Makefile nebo jiné obdobné alternativy pokud používáte jiný programovací jazyk než C/C++.
-  * Zdrojové kódy musí být kompilovatelné na operačním systému Linux.
-  * Binrání program musí být umístěn uvnitř archivu v vaslogin/bin/mila2tm.
+Přídavné informace tisken překladač pouze na požádání pomnocí přepínače -v, bez toho přepínače překladač vypisuje pouze chyby do stderr a korektně vrátí návratovou hodnotu, že kompilace selhala (return 1). Přídavné informace musí být buď ve formě komentářů nebo musí být směřovaný do stderr.
 
 ===== Přehled jednotlivých zadání a bodového hodnocení =====
 
-Překladač vytváří korektní cílový kód z pohledu funkčnosti a používá optimalizaci výpočtu numerických konstantních výrazu (constant folding) (pozn. tato optimalizace je již implementována v dodaném front endu jazyka Mila) -  max. 10 b.  
+Překladač vytváří korektní cílový kód z pohledu funkčnosti a používá optimalizaci výpočtu numerických konstantních výrazu (constant folding) (pozn. tato optimalizace je již implementována v dodaném front endu jazyka Mila) -  max 10 b.  
 
 **Jednotlivá zadání:**
 
-1.  
-  * Optimalizujte společné podvýrazy v rámci jednoho výrazu - max. 10 b.
-    * Ukázka 1: (a + b) + (a + b) + (b + a) * ( (a * b) + (b * a) ) + (a * b) + (c + a + b) - optimalizace musí detekovat všechny společné podvýrazy, bez ohledu na pořadí proměnných, proměnnou navíc, atd.
-    * Ukázka 2:<code>
+1.
+  * Optimalizujte společné podvýrazy v rámci jednoho výrazu. - max 5 b. <code>
+x := (a + b) * (a + b);
+--
+x := (a + b) * (b + a);
+--
+x := (a + b) * (a + b + c);
+--
+x := (a + b) * (c + b + a);
+--
+x := (a + b) * ((a + b) + c);
+--
+x := (a + b) * (c + (b + a));
+--
+x := (a + b) * (a + (b + c));
+--
+x := (a + b) * ((c + b) + a);
+</code>
+  * Optimalizujte společné podvýrazy i mezi výrazy. - max 5 b. <code>
+x := (a + b) * c;
+y := (a * (a + b));
+</code>
+  * Další ukázky:
+    * Ukázka 1 - optimalizace musí detekovat všechny společné podvýrazy, bez ohledu na pořadí proměnných, proměnnou navíc, atd.:<code>
+(a + b) + (a + b) + (b + a) * ( (a * b) + (b * a) ) + (a * b) + (c + a + b)
+</code>
+    * Ukázka 2 - komplexnější uázka:<code>
 var i,j,x,y,a,b,c,d,e,f,g,h;
 begin
 a := 1;
@@ -62,14 +98,14 @@ e := 5;
 f := 3;
 g := 2;
 h := 1;
-{read a;
+read a;
 read b;
 read c;
 read d;
 read e;
 read f;
 read g;
-read h;}
+read h;
 x := 0;
 y := (((((x+a)*(x+b))*((x+c)*(x+d)) * ((x+e)*(x+f))*((x+g)*(x+h))) * (((a+x)*(b+x))*((c+x)*(d+x)) * ((e+x)*(f+x))*((g+x)*(h+x))))
     + ((((x-a)*(x-b))*((x-c)*(x-d)) * ((x-e)*(x-f))*((x-g)*(x-h))) * (((a-x)*(b-x))*((c-x)*(d-x)) * ((e-x)*(f-x))*((g-x)*(h-x)))))
@@ -83,16 +119,17 @@ write j;
 write y;
 end
 </code>
-
-  * Optimalizujte používání cyklů přesunutím invariantů mimo tělo cyklu -  max. 10 b.
+  * Vyhodnocení výrazů v čase kompilace -  max 5 b.
+  * Optimalizujte používání cyklů přesunutím invariantů mimo tělo cyklu -  max 5 b.
 2. 
-  * Optimalizujte používání registrů tak, aby dostupné registry byly maximálně využity, v rámci celého programu - max. 20b. Práce bude hodnocena podle kvality optimalizace.
-  * Případně (pokud by se Vam zadání předchozí věty zdálo obtížné), optimalizujte používání registrů tak, aby dostupné registry byly maximálně využity, v rámci výrazů - max. 10b.
+  * Optimalizujte používání registrů tak, aby dostupné registry byly maximálně využity, v rámci celého programu - max 20b. Práce bude hodnocena podle kvality optimalizace. - max 15 b.
+  * Případně (pokud by se Vam zadání předchozí věty zdálo obtížné), optimalizujte používání registrů tak, aby dostupné registry byly maximálně využity, v rámci výrazů. - max 10 b.
+  * Vyhodnocení výrazů v čase kompilace. -  max 5 b.
 3.
-  * Implementujte výběr instrukcí Graham-Glanvillovou technikou nebo pomocí vyhledávání vzorků a dynamického programování (uvažujte následující ceny instrukcí: cena instrukce bez přístupu do hlavní paměti (tj. používající pouze registry, RA a RM instrukce) bude 1, ceny instrukce s přístupem do hlavní paměti (RM instrukce) bude 2) - max. 20 b. 
+  * Implementujte výběr instrukcí Graham-Glanvillovou technikou nebo pomocí vyhledávání vzorků a dynamického programování (uvažujte následující ceny instrukcí: cena instrukce bez přístupu do hlavní paměti (tj. používající pouze registry, RA a RM instrukce) bude 1, ceny instrukce s přístupem do hlavní paměti (RM instrukce) bude 2). - max 15 b. 
+  * Vyhodnocení výrazů v čase kompilace. -  max 5 b.
 
   
-
 
 ===== Soubory ke stažení =====
   * {{:semestral_work:gen-semestralka.zip|Zdrojové kódy torza semestrálky}} - obsahuje kompletní překladač jazyka Mila a interpreter Tiny Machine (POZOR: interpreter je modifikovaný oproti originálu o novou instrukci)
@@ -133,7 +170,7 @@ Instrukce jsou trojího druhu
 | DIV  | dělení   | ''<nowiki>reg(r) = reg(s) / reg(t)</nowiki>'' |
 | **RM instrukce, zapisují se ve formátu např LD r,d(s)** |||
 | LD | čtení z paměti  | ''<nowiki>reg(r) = mem(d + reg(s))</nowiki>'' | 
-| ST | zápis do paměti | ''<nowiki>mem(d + reg(s)) = reg(r)</nowik>'' |
+| ST | zápis do paměti | ''<nowiki>mem(d + reg(s)) = reg(r)</nowiki>'' |
 | **RA instrukce, opět ve formátu LDA r,d(s)** |||
 | LDA  | zápis adresy v paměti (pointeru) do registru | ''<nowiki>reg(r) = d+reg(s)</nowiki>''  |
 | LDC  | zápis konstanty do registru | ''<nowiki>reg(r) = d</nowiki>'', ''reg(s)'' je ignorován |
