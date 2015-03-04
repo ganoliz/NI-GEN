@@ -30,9 +30,13 @@ Dále na této stránce naleznete popis jednotlivých zadáni, soubory ke staže
 
 Pokud nemáte GitLab účet, vytvořte si jej na: https://gitlab.fit.cvut.cz. Alernativně je možné použít git platformu dle vaší volby.
 
-Vašemu repozitáři přidejte deployment klíč, v případě školního GitLab přidejte uživatele Ing. Radomír Polách s právy pro čtení: {{:semestral_work:id_rsa.pub.gz|}}
+Vašemu repozitáři přidejte nový deployment klíč, v případě školního GitLab přidejte uživatele Ing. Radomír Polách s právy pro čtení.
 
-Z Vaší fakultní emailové adresy pošlete mail (na radomir.polach@fit.cvut.cz) s předmětem "MI-GEN 2015 Repository", který bude obsahovat v (text) body URL Vašeho repozitáře, např.: git@gitlab.fit.cvut.cz:login/repo_name.git
+Z Vaší fakultní emailové adresy pošlete mail (na radomir.polach@fit.cvut.cz) s předmětem "MI-GEN 2015 Repository", který bude obsahovat dva řádky v body URL Vašeho repozitáře a deployment key, např.:
+<code>
+git@gitlab.fit.cvut.cz:login/repo_name.git
+ssh-rsa ... (případně nic, pokud se jedná o školní GitLab)
+</code>
 
 Kompilace Vaší práce musí být možná pomocí přidaného Makefile na platformě GNU Linux.
 
