@@ -89,9 +89,9 @@ y := (a * (a + b));
 </code>
   * Další ukázky:
     * Ukázka 1 - optimalizace musí detekovat všechny společné podvýrazy, bez ohledu na pořadí proměnných, proměnnou navíc, atd.:<code>
-(a + b) + (a + b) + (b + a) * ( (a * b) + (b * a) ) + (a * b) + (c + a + b)
+(a + b) + (a + b) + (b + a) * ((a * b) + (b * a)) + (a * b) + (c + a + b)
 </code>
-    * Ukázka 2 - komplexnější uázka:<code>
+    * Ukázka 2 - komplexnější ukázka:<code>
 var i,j,x,y,a,b,c,d,e,f,g,h;
 begin
 a := 1;
@@ -124,6 +124,30 @@ write y;
 end
 </code>
   * Vyhodnocení výrazů v čase kompilace -  max 5 b.
+    * Pokud v ukázce výše nebudeme načítat hodnoty ze vstupu:<code>
+var i,j,x,y,a,b,c,d,e,f,g,h;
+begin
+a := 1;
+b := 2;
+c := 3;
+d := 4;
+e := 5;
+f := 3;
+g := 2;
+h := 1;
+x := 0;
+y := (((((x+a)*(x+b))*((x+c)*(x+d)) * ((x+e)*(x+f))*((x+g)*(x+h))) * (((a+x)*(b+x))*((c+x)*(d+x)) * ((e+x)*(f+x))*((g+x)*(h+x))))
+    + ((((x-a)*(x-b))*((x-c)*(x-d)) * ((x-e)*(x-f))*((x-g)*(x-h))) * (((a-x)*(b-x))*((c-x)*(d-x)) * ((e-x)*(f-x))*((g-x)*(h-x)))))
+  + (((((a+x)*(x+b))*((x+c)*(x+d)) * ((x+e)*(x+f))*((x+g)*(x+h))) * (((a+x)*(b+x))*((c+x)*(d+x)) * ((e+x)*(f+x))*((g+x)*(h+x))))
+      + ((((x-a)*(x-b))*((x-c)*(x-d)) * ((x-e)*(x-f))*((x-g)*(x-h))) * (((a-x)*(b-x))*((c-x)*(d-x)) * ((e-x)*(f-x))*((g-x)*(h-x)))));
+i := ((x+a)*(x+b))*((x+c)*(x+d)) * ((x+e)*(x+f))*((x+g)*(x+h));
+j := ((a+x)*(b+x))*((c+x)*(d+x)) * ((e+x)*(f+x))*((g+x)*(h+x));
+y := i * j;
+write i;
+write j;
+write y;
+end
+</code>
   * Optimalizujte používání cyklů přesunutím invariantů mimo tělo cyklu -  max 5 b.
 2. 
   * Optimalizujte používání registrů tak, aby dostupné registry byly maximálně využity, v rámci celého programu - max 20b. Práce bude hodnocena podle kvality optimalizace. - max 15 b.
