@@ -185,7 +185,7 @@ Instrukce jsou trojího druhu
 
 ^ Op.znak ^ význam ^^
 | **RR instrukce, zapisují se ve formátu například ADD r,s,t** |||
-| HALT | zastavení programu | operandy jsou ignorovány |
+| HALT | zastavení programu | první operand slouží jako návratová hodnota, zbylé operandy jsou ignorovány |
 | IN   | čtení vstupu | čtení do ''<nowiki>reg(r)</nowiki>'', ostatní jsou ignorovány |
 | OUT  | výstup   | výpis hodnoty z ''<nowiki>reg(r)</nowiki>'', ostatní jsou ignorovány |
 | ADD  | sčítání  | ''<nowiki>reg(r) = reg(s) + reg(t)</nowiki>'' |
