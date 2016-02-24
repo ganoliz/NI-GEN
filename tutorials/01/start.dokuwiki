@@ -1,3 +1,11 @@
+====== 1. Úvod do cmake, instalace LLVM (2016) ======
+
+{{:tutorials:01:cviceni_01.pdf|}}
+
+
+
+======= Starší verze =======
+
 ====== 1. Úvod; Vnitřní forma abstraktní syntaktický strom a jeho generování ======
   * [[..:solutions:01:start]]
 
