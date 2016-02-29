@@ -1,6 +1,6 @@
 ~~anketa~~
 
-====== 1. Úvod, struktura překladače, jeho zadnÍ části (backendu), vnitřní formy ======
+====== 1. Úvod, struktura překladače, jeho zadnÍ části (backendu), vnitřní formy (AST, tříadresový lineární kód) ======
   * [[..:solutions:01:start]]
 
 {{:lectures:01:gen-prednaska1_2016.pdf|}}
