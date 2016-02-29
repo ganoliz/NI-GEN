@@ -1,6 +1,6 @@
 ~~anketa~~
 
-====== 2. Vnitřní reprezentace (mezikódy): abstraktní syntaktický strom, tabulka symbolů ======
+====== 2. Vnitřní reprezentace překladače GNU Compiler collection (gcc) ======
   * [[..:solutions:02:start]]
 
 {{:lectures:02:gen-prednaska2.pdf|}}
