@@ -1,6 +1,6 @@
 ~~anketa~~
 
-====== 3. Vnitřní reprezentace (mezikódy): tříadresový kód, základní blok, graf toku řízení, mezikód pro zásobníkový počítač ======
+====== 3.  Vnitřní reprezentace překladače LLVM ======
   * [[..:solutions:03:start]]
 
 
