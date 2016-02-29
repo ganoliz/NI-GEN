@@ -1,6 +1,6 @@
 ~~anketa~~
 
-====== 4. Runtime prostředí ======
+====== 4. Runtime prostředí; tříadresový kód, základní blok, graf toku řízení, mezikód pro zásobníkový počítač ======
   * [[..:solutions:04:start]]
 
 {{:lectures:04:gen-lecture4.pdf|}}
