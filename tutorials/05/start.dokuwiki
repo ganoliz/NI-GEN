@@ -1,2 +1,8 @@
+====== 5. Constant Propagation =====
+
+Tady je kod z dnesni hodiny, se vsemi chybami tak, jak jsme ho spolecnymi silami natukali. Jedina vec, kterou jsem pridal je metoda getAnalysisUsage() v mila::cp::Optimization, ktera llvm rekne ze nase cp optimalizace potrebuje cp analyzu. 
+
+{{:tutorials:05:mi-gen-hw2.tar|}}
+
 ====== 5. Konzultace k semestrálce; Seznámení se s frontendem jazyka Mila a cílovým jazykem - asemblerem virtuálního počítače Tiny Machine ======
   * [[..:solutions:05:start]]
