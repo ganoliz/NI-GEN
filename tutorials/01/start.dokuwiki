@@ -1,6 +1,36 @@
 ====== 1. Úvod do cmake, instalace LLVM (2016) ======
 
-{{:tutorials:01:cviceni_01.pdf|}}
+{{:tutorials:01:cviceni_1.pdf|}}
+
+Prikazy pro stazeni a zkompilovani LLVM:
+
+<code>
+svn co http://llvm.org/svn/llvm-project/llvm/tags/RELEASE_370/final/ llvm-src-370
+mkdir llvm-debug-370
+cd llvm-debug-370
+cmake -G "Ninja" -DLLVM_OPTIMIZED_TABLEGEN=1 -DLLVM_ENABLE_RTTI=1 -DLLVM_TARGETS_TO_BUILD="X86;CppBackend" -DCMAKE_BUILD_TYPE="Debug" --enable-debug-symbols --with-oprofile ../llvm-src-370
+ninja
+</code>
+
+Pokud chcete, muzete samozrejme pouzit I make:
+
+<code>
+cmake -DLLVM_OPTIMIZED_TABLEGEN=1 -DLLVM_ENABLE_RTTI=1 -DLLVM_TARGETS_TO_BUILD="X86;CppBackend" -DCMAKE_BUILD_TYPE="Debug" --enable-debug-symbols --with-oprofile ../llvm-src-370
+make
+</code>
+
+A konecne, pro release verzi pouzijte nasledujici konfiguraci:
+
+<code>
+mkdir llvm-release-370
+cd llvm-release-370
+cmake -G "Ninja" -DLLVM_OPTIMIZED_TABLEGEN=1 -DLLVM_ENABLE_RTTI=1 -DLLVM_TARGETS_TO_BUILD="X86;CppBackend" -DCMAKE_BUILD_TYPE="Release" ../llvm-src-370
+ninja
+</code>
+
+
+
+
 
 
 
