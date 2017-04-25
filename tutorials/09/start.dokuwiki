@@ -1,3 +1,19 @@
+====== 9. Dokonceni Abstraktni Interpretace, Projekty =====
+
+Nejdriv odpoved na tu prilis benevolentni kontrolu v tom const propagation, ktera se vam bude hodit i v tomhle. Nestaci vedet pouze ze nejaka hodnota je konstanta, nektere LLVM instrukce nemuzete jentak smazat, protoze by pak program nedaval smysl, napriklad compare instrukce - jejichz vysledek je i1, ale my pocitame konstanty jen i32. Pro analyzu nam to je jedno, ale pro optimalizaci by to nahrazeni nebylo typove spravne. 
+
+Zadani projektu je:
+
+* dopsat constant propagation
+* 2 z inlining, loop unrolling, tail recursion
+* dead code elimination
+* dead instruction elimination
+* a samozrejme ten parser, co uz mate hotovy;-)
+
+Tady je projekt:
+
+{{:tutorials:09:mi-gen-hw-2017.tgz|}}
+
 ====== 9. Odpada =====
 
 Pardon, z duvodu nemoci cviceni odpada. 
