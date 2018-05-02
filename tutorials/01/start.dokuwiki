@@ -1,3 +1,12 @@
+====== 1. Úvod (2018) ======
+
+Zde najdete materialy k LLVM a staticke analyze:
+
+{{:tutorials:01:cviceni1.pdf|}}
+{{:tutorials:01:cviceni2.pdf|}}
+{{:tutorials:01:prednaska.pdf|}}
+{{:tutorials:01:staticanalysis.pdf|}}
+
 ====== 1. Úvod do cmake, instalace LLVM (2016) ======
 
 {{:tutorials:01:cviceni_1.pdf|}}
