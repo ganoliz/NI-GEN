@@ -1,4 +1,7 @@
-====== 10. Paralelismus na úrovni instrukcí, pipelining ======
-  * [[..:solutions:10:start]]
+= 10. Paralelismus na úrovni instrukcí, pipelining 
+:imagesdir: ../../media/lectures/10
 
-{{:lectures:10:gen-prednaska10.pdf|}}
+
+* xref:../solutions/10/index#[]
+
+link:{imagesdir}/gen-prednaska10.pdf[gen-prednaska10.pdf]

@@ -1,2 +1,5 @@
-====== 13. Rezerva ======
-  * [[..:solutions:13:start]]
+= 13. Rezerva 
+:imagesdir: ../../media/lectures/13
+
+
+* xref:../solutions/13/index#[]

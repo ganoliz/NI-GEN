@@ -1,8 +1,9 @@
-~~anketa~~
-
-====== 3.  Vnitřní reprezentace překladače LLVM ======
-  * [[..:solutions:03:start]]
+= 3.  Vnitřní reprezentace překladače LLVM 
+:imagesdir: ../../media/lectures/03
 
 
-{{:lectures:03:llvm_bitcode.pdf|}}
-{{:lectures:03:gen-prednaska3.pdf|}}
+* xref:../solutions/03/index#[]
+
+
+link:{imagesdir}/llvm-bitcode.pdf[llvm-bitcode.pdf]
+link:{imagesdir}/gen-prednaska3.pdf[gen-prednaska3.pdf]

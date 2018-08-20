@@ -1,2 +1,5 @@
-====== 6. - ======
-  * [[..:solutions:06:start]]
+= 6. - 
+:imagesdir: ../../media/tutorials/06
+
+
+* xref:../solutions/06/index#[]

@@ -1,10 +1,10 @@
-~~anketa~~
-
-====== 8. Optimalizace: úvod, konverze 3AC <-> AST, lokální optimalizace v rámci základního bloku ======
-  * [[..:solutions:08:start]]
+= 8. Optimalizace: úvod, konverze 3AC <-> AST, lokální optimalizace v rámci základního bloku 
+:imagesdir: ../../media/lectures/08
 
 
-{{:lectures:08:gen-lecture8.pdf|}}
+* xref:../solutions/08/index#[]
 
-{{:lectures:08:gcc_optimize-options.pdf|}}
 
+link:{imagesdir}/gen-lecture8.pdf[gen-lecture8.pdf]
+
+link:{imagesdir}/gcc-optimize-options.pdf[gcc-optimize-options.pdf]

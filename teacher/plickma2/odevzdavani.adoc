@@ -1,7 +1,10 @@
-====== Pořadník na odevzdávání semestrálky ======
+= Pořadník na odevzdávání semestrálky 
+:imagesdir: ../../media/teacher/plickma2
 
-===== Úterý 10.5. =====
 
-  * Jan Kucera (kucerj23)
-  * Petr Pavlů
-  * Zemancik Tomas (zemanto6)
+== Úterý 10.5.
+
+
+* Jan Kucera (kucerj23)
+* Petr Pavlů
+* Zemancik Tomas (zemanto6)

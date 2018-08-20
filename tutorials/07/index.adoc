@@ -1,12 +1,19 @@
-====== 7. Zadani projektu ======
+= 7. Zadani projektu 
+:imagesdir: ../../media/tutorials/07
+
 
 Rok 2017: viz cviceni 9
 
-====== 7. Zadani projektu ======
+
+= 7. Zadani projektu
+
 
 Rok 2016
 
-  * {{:tutorials:07:mi-gen-base-tests.tar|}}
+* link:{imagesdir}/mi-gen-base-tests.tar[mi-gen-base-tests.tar]
 
-====== 7. Generování kódu pokrýváním stromu ======
-  * [[..:solutions:07:start]]
+
+= 7. Generování kódu pokrýváním stromu
+
+
+* xref:../solutions/07/index#[]

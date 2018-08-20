@@ -1,13 +1,8 @@
-{{indexmenu_n>6000}}
-
-====== Cvičení ======
-
-{{indexmenu>.#1 | tsort msort}}
+= Cvičení 
+:imagesdir: ../media/tutorials
 
 
+Materiály k semestrální práci lze nalézt zde: xref:../semestral-work/index#[].
 
-Materiály k semestrální práci lze nalézt zde: [[semestral_work:start|]].
 
-
-Materiály ke starší semestrální práci lze nalézt zde: [[semestral_work:start|]].
-
+Materiály ke starší semestrální práci lze nalézt zde: xref:../semestral-work/index#[].

@@ -1,6 +1,8 @@
-====== 9. Dokonceni Abstraktni Interpretace, Projekty =====
+= 9. Dokonceni Abstraktni Interpretace, Projekty 
+:imagesdir: ../../media/tutorials/09
 
-Nejdriv odpoved na tu prilis benevolentni kontrolu v tom const propagation, ktera se vam bude hodit i v tomhle. Nestaci vedet pouze ze nejaka hodnota je konstanta, nektere LLVM instrukce nemuzete jentak smazat, protoze by pak program nedaval smysl, napriklad compare instrukce - jejichz vysledek je i1, ale my pocitame konstanty jen i32. Pro analyzu nam to je jedno, ale pro optimalizaci by to nahrazeni nebylo typove spravne. 
+
+Nejdriv odpoved na tu prilis benevolentni kontrolu v tom const propagation, ktera se vam bude hodit i v tomhle. Nestaci vedet pouze ze nejaka hodnota je konstanta, nektere LLVM instrukce nemuzete jentak smazat, protoze by pak program nedaval smysl, napriklad compare instrukce - jejichz vysledek je i1, ale my pocitame konstanty jen i32. Pro analyzu nam to je jedno, ale pro optimalizaci by to nahrazeni nebylo typove spravne.
 
 Zadani projektu je:
 
@@ -12,11 +14,16 @@ Zadani projektu je:
 
 Tady je projekt:
 
-{{:tutorials:09:mi-gen-hw-2017.tgz|}}
+link:{imagesdir}/mi-gen-hw-2017.tgz[mi-gen-hw-2017.tgz]
 
-====== 9. Odpada =====
 
-Pardon, z duvodu nemoci cviceni odpada. 
+= 9. Odpada
 
-====== 9. Optimalizace ======
-  * [[..:solutions:09:start]]
+
+Pardon, z duvodu nemoci cviceni odpada.
+
+
+= 9. Optimalizace
+
+
+* xref:../solutions/09/index#[]

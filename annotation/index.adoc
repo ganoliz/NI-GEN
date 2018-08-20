@@ -1,6 +1,5 @@
-{{indexmenu_n>1000}}
+= Anotace 
+:imagesdir: ../media/annotation
 
-====== Anotace ======
 
-Studenti se seznámí s teoretickou i praktickou stránkou realizace zadní části optimalizujícího překladače programovacího jazyka. 
-
+Studenti se seznámí s teoretickou i praktickou stránkou realizace zadní části optimalizujícího překladače programovacího jazyka.

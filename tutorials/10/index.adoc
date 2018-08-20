@@ -1,2 +1,5 @@
-====== 10. - ======
-  * [[..:solutions:10:start]]
+= 10. - 
+:imagesdir: ../../media/tutorials/10
+
+
+* xref:../solutions/10/index#[]

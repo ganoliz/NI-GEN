@@ -1,2 +1,5 @@
-====== 11. Zápočtový test ======
-  * [[..:solutions:11:start]]
+= 11. Zápočtový test 
+:imagesdir: ../../media/lectures/11
+
+
+* xref:../solutions/11/index#[]

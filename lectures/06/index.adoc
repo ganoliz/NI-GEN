@@ -1,6 +1,8 @@
-====== 6. Výběr instrukcí: Graham-Glanvillova metoda, vyhledávání vzorků a dynamické programování, maximal munch ======
-  * [[..:solutions:06:start]]
+= 6. Výběr instrukcí: Graham-Glanvillova metoda, vyhledávání vzorků a dynamické programování, maximal munch 
+:imagesdir: ../../media/lectures/06
 
 
-{{:lectures:06:gen-lecture6.pdf|}}
+* xref:../solutions/06/index#[]
 
+
+link:{imagesdir}/gen-lecture6.pdf[gen-lecture6.pdf]

@@ -1,72 +1,87 @@
-====== Semestrální práce ======
+= Semestrální práce 
+:imagesdir: ../media/semestral-work
+:toc:
 
-===== Zadání celkově =====
 
-Vytvořte překladač z jazyka Mila do jazyka architektury virtuálního počítače Tiny Machine (viz take [[http://www.cs.sjsu.edu/~louden/cmptext/|překladač ke knize Compiler Construction]]). Tiny machine byl upraven aby podporoval některé instrukce navíc, jmenovitě INC, DEC (pro optimalizace pokrýváním instrukcemi) a IN (pro podporu read).
+== Zadání celkově
+
+
+Vytvořte překladač z jazyka Mila do jazyka architektury virtuálního počítače Tiny Machine (viz take http://www.cs.sjsu.edu/~louden/cmptext/[překladač ke knize Compiler Construction]). Tiny machine byl upraven aby podporoval některé instrukce navíc, jmenovitě INC, DEC (pro optimalizace pokrýváním instrukcemi) a IN (pro podporu read).
 
 Vstupem Vašeho programu bude zdrojový kód v jazyce Mila.
 
-Výstupem Vašeho programu bude kód programu v asembleru pro Tiny Machine, který půjde spustit v interpreteru ''tm.c'', uloženém v balíku s podklady pro semestrálku.
+Výstupem Vašeho programu bude kód programu v asembleru pro Tiny Machine, který půjde spustit v interpreteru `tm.c`, uloženém v balíku s podklady pro semestrálku.
 
 Olvádání programu je popsáno v sekci ovládání.
 
-Níže v textu jsou specifikovány podrobnosti tří konkrétních zadání, které zahrnují překlad používající optimalizace, výběr cílových instrukcí a/nebo efektivní přidělování registrů. Každý ze studentů si vybere jedno z těchto zadání podle svého uvážení a zájmu. Zároveň u jednotlivých zadání je specifikován způsob hodnocení výsledné práce s maximálními počty bodů.  
+Níže v textu jsou specifikovány podrobnosti tří konkrétních zadání, které zahrnují překlad používající optimalizace, výběr cílových instrukcí a/nebo efektivní přidělování registrů. Každý ze studentů si vybere jedno z těchto zadání podle svého uvážení a zájmu. Zároveň u jednotlivých zadání je specifikován způsob hodnocení výsledné práce s maximálními počty bodů.
 
 Pro vypracování semestrální práce doporučujeme využít a případně podle sebe modifikovat již existující front-end překladače Mila, viz balík s podklady pro semestrálku.
 Tento front-end již obsahuje optimalizaci výpočtu konstantních výrazů. Ukázkový front-end neobsahuje konstrukci read pro čtení ze standardního vstupu.
 
 Termíny pro odevzdání práce jsou následující:
 
-  * do 7.6.2015 (student může za semestrálku získat plný počet bodů)
+* do 7.6.2015 (student může za semestrálku získat plný počet bodů)
 
-  * od 7.6.2015 do konce zkouškového (bude uplatněna penalizace odečtem 50 procent ze získaných bodů) 
- 
+* od 7.6.2015 do konce zkouškového (bude uplatněna penalizace odečtem 50 procent ze získaných bodů)
+
 
 Do 1.5.2015 každý ze studentů odešla email s adresou repozitáře cvičícímu, viz níže. Cvičící na tento email typicky neodpovídá. Individuálně je možné dohodnout speciální (typicky obtížnější) zadání.
 
 Dále na této stránce naleznete popis jednotlivých zadáni, soubory ke stažení a popis architektury Tiny Machine.
 
-===== Struktura překladače, jeho ovládání a odevzdávání =====
+
+== Struktura překladače, jeho ovládání a odevzdávání
+
 
 Pokud nemáte GitLab účet, vytvořte si jej na: https://gitlab.fit.cvut.cz. Alernativně je možné použít git platformu dle vaší volby.
 
 Vašemu repozitáři přidejte nový deployment klíč, v případě školního GitLab přidejte uživatele Ing. Radomír Polách s právy pro čtení.
 
-Z Vaší fakultní emailové adresy pošlete mail (na radomir.polach@fit.cvut.cz) s předmětem "MI-GEN 2015 Repository", který bude obsahovat dva řádky v body URL Vašeho repozitáře a deployment key, např.:
-<code>
+Z Vaší fakultní emailové adresy pošlete mail (na radomir.polach@fit.cvut.cz) s předmětem „MI-GEN 2015 Repository“, který bude obsahovat dva řádky v body URL Vašeho repozitáře a deployment key, např.:
+
+----
 git@gitlab.fit.cvut.cz:login/repo_name.git
 ssh-rsa ... (případně nic, pokud se jedná o školní GitLab)
-</code>
+----
+
 
 Kompilace Vaší práce musí být možná pomocí přidaného Makefile na platformě GNU Linux.
 
 Struktura odevzdávaného překladače (root repozitáře větve master):
-  * Makefile
-  * type - soubor obsahující typ zadání, tj. hodnota 1,2 nebo 3
-  * src/ - zdrojové kódy
-  * bin/ - obsahuje program překladače, knihovny atd. vytvořené při koompilace pomocí Makefile
-  * bin/mila2tm - binární program překladače, případně wrapper script
-  * doc/ - dokuemntace
+
+* Makefile
+* type - soubor obsahující typ zadání, tj. hodnota 1,2 nebo 3
+* src/ - zdrojové kódy
+* bin/ - obsahuje program překladače, knihovny atd. vytvořené při koompilace pomocí Makefile
+* bin/mila2tm - binární program překladače, případně wrapper script
+* doc/ - dokuemntace
 
 Přeladač splňuje následující ovládání:
-  * ./mila2tm -o target.tm src.mila - výstup do souboru
-  * ./mila2tm src.mila - výstup do stdout
-  * ./mila2tm -o target.tm - výstup te stdin
-  * ./mila2tm - vstup na stdin, výstup na stdout
-  * Možnosti souborů a standardních io je možné libovolně kombinovat.
+
+* ./mila2tm -o target.tm src.mila - výstup do souboru
+* ./mila2tm src.mila - výstup do stdout
+* ./mila2tm -o target.tm - výstup te stdin
+* ./mila2tm - vstup na stdin, výstup na stdout
+* Možnosti souborů a standardních io je možné libovolně kombinovat.
 
 Název spustitelného souboru překladače nechť je mila2tm, pokud je používán nějaký specializovaný jazyk je třeba, aby byl dostupný wrapper skript, který má schodné ovládání.
 
 Přídavné informace tisken překladač pouze na požádání pomnocí přepínače -v, bez toho přepínače překladač vypisuje pouze chyby do stderr a korektně vrátí návratovou hodnotu, že kompilace selhala (return 1). Přídavné informace musí být buď ve formě komentářů nebo musí být směřovaný do stderr.
 
-===== Přehled jednotlivých zadání a bodového hodnocení =====
 
-Překladač vytváří korektní cílový kód z pohledu funkčnosti a používá optimalizaci výpočtu numerických konstantních výrazu (constant folding) (pozn. tato optimalizace je již implementována v dodaném front endu jazyka Mila) -  max 10 b.  
+== Přehled jednotlivých zadání a bodového hodnocení
 
-**Jednotlivá zadání:**
 
-1.
-  * Optimalizujte společné podvýrazy v rámci jednoho výrazu. - max 5 b. <code>
+Překladač vytváří korektní cílový kód z pohledu funkčnosti a používá optimalizaci výpočtu numerických konstantních výrazu (constant folding) (pozn. tato optimalizace je již implementována v dodaném front endu jazyka Mila) -  max 10 b.
+
+*Jednotlivá zadání:*
+
+​1.
+
+* Optimalizujte společné podvýrazy v rámci jednoho výrazu. - max 5 b.
++
+----
 x := (a + b) * (a + b);
 --
 x := (a + b) * (b + a);
@@ -82,16 +97,25 @@ x := (a + b) * (c + (b + a));
 x := (a + b) * (a + (b + c));
 --
 x := (a + b) * ((c + b) + a);
-</code>
-  * Optimalizujte společné podvýrazy i mezi výrazy. - max 5 b. <code>
+----
++
+* Optimalizujte společné podvýrazy i mezi výrazy. - max 5 b.
++
+----
 x := (a + b) * c;
 y := (a * (a + b));
-</code>
-  * Další ukázky:
-    * Ukázka 1 - optimalizace musí detekovat všechny společné podvýrazy, bez ohledu na pořadí proměnných, proměnnou navíc, atd.:<code>
+----
++
+* Další ukázky:
+** Ukázka 1 - optimalizace musí detekovat všechny společné podvýrazy, bez ohledu na pořadí proměnných, proměnnou navíc, atd.:
++
+----
 (a + b) + (a + b) + (b + a) * ((a * b) + (b * a)) + (a * b) + (c + a + b)
-</code>
-    * Ukázka 2 - komplexnější ukázka:<code>
+----
++
+** Ukázka 2 - komplexnější ukázka:
++
+----
 var i,j,x,y,a,b,c,d,e,f,g,h;
 begin
 a := 1;
@@ -122,9 +146,12 @@ write i;
 write j;
 write y;
 end
-</code>
-  * Vyhodnocení výrazů v čase kompilace -  max 5 b.
-    * Pokud v ukázce výše nebudeme načítat hodnoty ze vstupu:<code>
+----
++
+* Vyhodnocení výrazů v čase kompilace -  max 5 b.
+** Pokud v ukázce výše nebudeme načítat hodnoty ze vstupu:
++
+----
 var i,j,x,y,a,b,c,d,e,f,g,h;
 begin
 a := 1;
@@ -147,115 +174,131 @@ write i;
 write j;
 write y;
 end
-</code>
-  * Optimalizujte používání cyklů přesunutím invariantů mimo tělo cyklu -  max 5 b.
-2. 
-  * Optimalizujte používání registrů tak, aby dostupné registry byly maximálně využity, v rámci celého programu - max 20b. Práce bude hodnocena podle kvality optimalizace. - max 15 b.
-  * Případně (pokud by se Vam zadání předchozí věty zdálo obtížné), optimalizujte používání registrů tak, aby dostupné registry byly maximálně využity, v rámci výrazů. - max 10 b.
-  * Vyhodnocení výrazů v čase kompilace. -  max 5 b.
+----
++
+* Optimalizujte používání cyklů přesunutím invariantů mimo tělo cyklu -  max 5 b.
+
+2.
+
+* Optimalizujte používání registrů tak, aby dostupné registry byly maximálně využity, v rámci celého programu - max 20b. Práce bude hodnocena podle kvality optimalizace. - max 15 b.
+* Případně (pokud by se Vam zadání předchozí věty zdálo obtížné), optimalizujte používání registrů tak, aby dostupné registry byly maximálně využity, v rámci výrazů. - max 10 b.
+* Vyhodnocení výrazů v čase kompilace. -  max 5 b.
+
 3.
-  * Implementujte výběr instrukcí Graham-Glanvillovou technikou nebo pomocí vyhledávání vzorků a dynamického programování (uvažujte následující ceny instrukcí: cena instrukce bez přístupu do hlavní paměti (tj. používající pouze registry, RA a RM instrukce) bude 1, ceny instrukce s přístupem do hlavní paměti (RM instrukce) bude 2). - max 15 b. 
-  * Vyhodnocení výrazů v čase kompilace. -  max 5 b.
 
-  
-
-===== Soubory ke stažení =====
-  * {{:semestral_work:gen-semestralka.zip|Zdrojové kódy torza semestrálky}} - obsahuje kompletní překladač jazyka Mila a interpreter Tiny Machine (POZOR: interpreter je modifikovaný oproti originálu o novou instrukci)
-  * {{:semestral_work:gen-semestralka.tar.gz|Nové zdrojové kódy torza semestrálky}} - obsahuje kompletní překladač jazyka Mila a interpreter Tiny Machine (POZOR: interpreter je modifikovaný oproti originálu o novou instrukci)
-  * {{:semestral_work:gen-mila.pdf|Popis syntaxe jazyka Mila}} (převzato z PJP, pro potřeby předmětu MI-GEN je třeba přidat navíc instrukci read pro čtení ze standardního vstupu, syntaxe je shodná s instrukcí write)
+* Implementujte výběr instrukcí Graham-Glanvillovou technikou nebo pomocí vyhledávání vzorků a dynamického programování (uvažujte následující ceny instrukcí: cena instrukce bez přístupu do hlavní paměti (tj. používající pouze registry, RA a RM instrukce) bude 1, ceny instrukce s přístupem do hlavní paměti (RM instrukce) bude 2). - max 15 b.
+* Vyhodnocení výrazů v čase kompilace. -  max 5 b.
 
 
+== Soubory ke stažení
 
-===== Popis architektury Tiny Machine  =====
 
-Snadný přehled o architektuře dostaneme pohledem do zdrojového kódu interpreteru v souboru ''tm.c''
+* link:{imagesdir}/gen-semestralka.zip[Zdrojové kódy torza semestrálky] - obsahuje kompletní překladač jazyka Mila a interpreter Tiny Machine (POZOR: interpreter je modifikovaný oproti originálu o novou instrukci)
+* link:{imagesdir}/gen-semestralka.tar.gz[Nové zdrojové kódy torza semestrálky] - obsahuje kompletní překladač jazyka Mila a interpreter Tiny Machine (POZOR: interpreter je modifikovaný oproti originálu o novou instrukci)
+* link:{imagesdir}/gen-mila.pdf[Popis syntaxe jazyka Mila] (převzato z PJP, pro potřeby předmětu MI-GEN je třeba přidat navíc instrukci read pro čtení ze standardního vstupu, syntaxe je shodná s instrukcí write)
+
+
+== Popis architektury Tiny Machine
+
+
+Snadný přehled o architektuře dostaneme pohledem do zdrojového kódu interpreteru v souboru `tm.c`
 
 Jedná se o RISC s defaultně 8 registry (0-7). Má oddělenou paměť pro instrukce a data. Jejich velikosti lze definovat makrem ve zdrojovém kódu interpreteru a obě jsou standardně velké 1024 slov.
 
 Poslední registr (7) se používá jako Program Counter (PC) a lze jej modifikovat přímo registrovými instrukcemi (lze tak realizovat nepodmíněný skok).
 
-==== Instrukční set ====
+
+=== Instrukční set
+
 
 Instrukce jsou trojího druhu
 
-  * Registr-registr instrukce (RR)
-  * Registr-paměť (RM)
-  * Registr-adresa (RA)
+* Registr-registr instrukce (RR)
+* Registr-paměť (RM)
+* Registr-adresa (RA)
 
 
-^ Op.znak ^ význam ^^
-| **RR instrukce, zapisují se ve formátu například ADD r,s,t** |||
-| HALT | zastavení programu | první operand slouží jako návratová hodnota, zbylé operandy jsou ignorovány |
-| IN   | čtení vstupu | čtení do ''<nowiki>reg(r)</nowiki>'', ostatní jsou ignorovány |
-| OUT  | výstup   | výpis hodnoty z ''<nowiki>reg(r)</nowiki>'', ostatní jsou ignorovány |
-| ADD  | sčítání  | ''<nowiki>reg(r) = reg(s) + reg(t)</nowiki>'' |
-| INC((Pozor, nenachází se v originální verzi interpreteru, je potřeba použít interpreter z našeho balíku)) | inkrementace o 1  | ''<nowiki>reg(r) = reg(r) + 1</nowiki>'', ostatní jsou ignorovány |
-| DEC((Pozor, nenachází se v originální verzi interpreteru, je potřeba použít interpreter z našeho balíku)) | dekrementace o 1  | ''<nowiki>reg(r) = reg(r) + 1</nowiki>'', ostatní jsou ignorovány |
-| SHR((Pozor, nenachází se v originální verzi interpreteru, je potřeba použít interpreter z našeho balíku)) | shift doprava  | ''<nowiki>reg(r) = reg(r) >> s</nowiki>'', ostatní jsou ignorovány |
-| SHL((Pozor, nenachází se v originální verzi interpreteru, je potřeba použít interpreter z našeho balíku)) | shift doleva  | ''<nowiki>reg(r) = reg(r) << s</nowiki>'', ostatní jsou ignorovány |
-| SUB  | odčítání | ''<nowiki>reg(r) = reg(s) - reg(t)</nowiki>'' |
-| MUL  | násobení | ''<nowiki>reg(r) = reg(s) * reg(t)</nowiki>'' |
-| DIV  | dělení   | ''<nowiki>reg(r) = reg(s) / reg(t)</nowiki>'' |
-| **RM instrukce, zapisují se ve formátu např LD r,d(s)** |||
-| LD | čtení z paměti  | ''<nowiki>reg(r) = mem(d + reg(s))</nowiki>'' | 
-| ST | zápis do paměti | ''<nowiki>mem(d + reg(s)) = reg(r)</nowiki>'' |
-| **RA instrukce, opět ve formátu LDA r,d(s)** |||
-| LDA  | zápis adresy v paměti (pointeru) do registru | ''<nowiki>reg(r) = d+reg(s)</nowiki>''  |
-| LDC  | zápis konstanty do registru | ''<nowiki>reg(r) = d</nowiki>'', ''reg(s)'' je ignorován |
-| JLT  | podmíněný skok | ''<nowiki>if reg(r)<0 then reg(7) = d + reg(s)</nowiki>'' |
-| JLE  | podmíněný skok | ''<nowiki>if reg(r)<=0 then reg(7) = d + reg(s)</nowiki>'' |
-| JGT  | podmíněný skok | ''<nowiki>if reg(r)>0 then reg(7) = d + reg(s)</nowiki>''  |
-| JGE  | podmíněný skok | ''<nowiki>if reg(r)>=0 then reg(7) = d + reg(s)</nowiki>'' |
-| JEQ  | podmíněný skok | ''<nowiki>if reg(r)==0 then reg(7) = d + reg(s)</nowiki>'' |
-| JNE  | podmíněný skok | ''<nowiki>if reg(r)!=0 then reg(7) = d + reg(s)</nowiki>'' |
+[options="autowidth"]
+|====
+<h| Op.znak  2+<h| význam
+3+| *RR instrukce, zapisují se ve formátu například ADD r,s,t*
+| HALT  | zastavení programu  | první operand slouží jako návratová hodnota, zbylé operandy jsou ignorovány
+| IN    | čtení vstupu  | čtení do ``++reg(r)++``, ostatní jsou ignorovány
+| OUT   | výstup    | výpis hodnoty z ``++reg(r)++``, ostatní jsou ignorovány
+| ADD   | sčítání   | ``++reg(r) = reg(s) + reg(t)++``
+| INCfootnote:[Pozor, nenachází se v originální verzi interpreteru, je potřeba použít interpreter z našeho balíku]  | inkrementace o 1   | ``++reg(r) = reg(r) + 1++``, ostatní jsou ignorovány
+| DECfootnote:[Pozor, nenachází se v originální verzi interpreteru, je potřeba použít interpreter z našeho balíku]  | dekrementace o 1   | ``++reg(r) = reg(r) + 1++``, ostatní jsou ignorovány
+| SHRfootnote:[Pozor, nenachází se v originální verzi interpreteru, je potřeba použít interpreter z našeho balíku]  | shift doprava   | ``++reg(r) = reg(r) >> s++``, ostatní jsou ignorovány
+| SHLfootnote:[Pozor, nenachází se v originální verzi interpreteru, je potřeba použít interpreter z našeho balíku]  | shift doleva   | ``++reg(r) = reg(r) << s++``, ostatní jsou ignorovány
+| SUB   | odčítání  | ``++reg(r) = reg(s) - reg(t)++``
+| MUL   | násobení  | ``++reg(r) = reg(s) * reg(t)++``
+| DIV   | dělení    | ``++reg(r) = reg(s) / reg(t)++``
+3+| *RM instrukce, zapisují se ve formátu např LD r,d(s)*
+| LD  | čtení z paměti   | ``++reg(r) = mem(d + reg(s))++``
+| ST  | zápis do paměti  | ``++mem(d + reg(s)) = reg(r)++``
+3+| *RA instrukce, opět ve formátu LDA r,d(s)*
+| LDA   | zápis adresy v paměti (pointeru) do registru  | ``++reg(r) = d+reg(s)++``
+| LDC   | zápis konstanty do registru  | ``++reg(r) = d++``, `reg(s)` je ignorován
+| JLT   | podmíněný skok  | ``++if reg(r)<0 then reg(7) = d + reg(s)++``
+| JLE   | podmíněný skok  | ``++if reg(r)<=0 then reg(7) = d + reg(s)++``
+| JGT   | podmíněný skok  | ``++if reg(r)>0 then reg(7) = d + reg(s)++``
+| JGE   | podmíněný skok  | ``++if reg(r)>=0 then reg(7) = d + reg(s)++``
+| JEQ   | podmíněný skok  | ``++if reg(r)==0 then reg(7) = d + reg(s)++``
+| JNE   | podmíněný skok  | ``++if reg(r)!=0 then reg(7) = d + reg(s)++``
+|====
 
-==== Práce s pamětí ====
+
+=== Práce s pamětí
+
 Na začátku běhu programu je datová paměť prázdná, kromě pozice 0, kde je uložena její délka, kterou si program může přečíst.
 
 Proto na začátku ukázkového přeloženého programu vidíme kód
-<code>
-  0:     LD  6,0(0) 
-  1:     ST  0,0(0) 
-</code>
+
+----
+  0:     LD  6,0(0)
+  1:     ST  0,0(0)
+----
+
 
 Překladač jazyka Tiny si tu poznamenává velikost hlavní paměti do registru 6. To se bude hodit i nám a to k následujícímu:
 
 Hlavní paměť potřebujeme ke dvěma účelům:
-  - uložení deklarovaných proměnných. 
-  - uložení pomocných proměnných např. při výpočtu složitých výrazů
 
-Deklarované proměnné můžeme ukládat na paměťová místa od začátku paměti. Jelikož se v paměťových operacích uvádí bázický registr (ten v závorce), jehož hodnota se doplňuje přímo zapsaným offsetem, musíme si tento počátek někam napsat, např. do registru číslo 5. Umístění v paměti vůči tomuto offsetu (tj, argument ''d'' LD/ST instrukce) pak získáme při překladu z tabulky symbolů. Jelikož procesor adresuje po slovech, pozice v paměti inkrementujeme s každou proměnnou o 1.
+. uložení deklarovaných proměnných.
+. uložení pomocných proměnných např. při výpočtu složitých výrazů
+
+Deklarované proměnné můžeme ukládat na paměťová místa od začátku paměti. Jelikož se v paměťových operacích uvádí bázický registr (ten v závorce), jehož hodnota se doplňuje přímo zapsaným offsetem, musíme si tento počátek někam napsat, např. do registru číslo 5. Umístění v paměti vůči tomuto offsetu (tj, argument `d` LD/ST instrukce) pak získáme při překladu z tabulky symbolů. Jelikož procesor adresuje po slovech, pozice v paměti inkrementujeme s každou proměnnou o 1.
 
 Pomocné proměnné se nám hodí pro výpočet složitých aritmetických nebo logických výrazů. Jelikož máme omezený počet registrů, ne vždy se nám povede výpočet vměstnat do registrů. Pro počet registrů potřebných k výpočtu výrazu existuje rekurentní pravidlo, které nás zajímá jen u binárních operací (závorky jsou jen prosté kopírování):
 
-  - K načtení číselné hodnoty z konstanty/proměnné potřebujeme 1 registr
-  - U binárního výrazu potřebujeme:
-    - Maximum z počtu registrů potřebných pro výpočet jednoho z podvýrazů, pokud se tento počet liší (nejprve spočteme složitější výraz, výsledek necháme v jednom z registrů, zbývajících ''n-1'' registrů můžeme použít pro výpočet toho jednoduššího).
-    - ''n+1'' registr pro výraz, který má oba podvýrazy stejně složité, tj. je potřeba pro každý ''n'' registrů. Pak si výsledek jednoho podvýrazu necháme v registru a dalších ''n'' potřebujeme na výpočet druhého.
+. K načtení číselné hodnoty z konstanty/proměnné potřebujeme 1 registr
+. U binárního výrazu potřebujeme:
+.. Maximum z počtu registrů potřebných pro výpočet jednoho z podvýrazů, pokud se tento počet liší (nejprve spočteme složitější výraz, výsledek necháme v jednom z registrů, zbývajících `n-1` registrů můžeme použít pro výpočet toho jednoduššího).
+.. `n+1` registr pro výraz, který má oba podvýrazy stejně složité, tj. je potřeba pro každý `n` registrů. Pak si výsledek jednoho podvýrazu necháme v registru a dalších `n` potřebujeme na výpočet druhého.
 
-Pokud nám registry nestačí, musíme používat pomocnou paměť. Pozn. profesor Louden to ve svém překladači, (viz take [[http://www.cs.sjsu.edu/~louden/cmptext/|překladač ke knize Compiler Construction]]), provádí uložením výsledku levého podstromu na zásobník, výpočtem pravého podstromu a vyzvednutí výsledku levého podstromu ze zásobníku. Ovšem dělá to i pro triviální případy, např. ''a + b'', kde bychom si vystačili s registry.
-Zásobník na pomocné proměnné lze alokovat od konce paměti, k tomu slouží onen registr 6 a záporné offsety. Tj. dočasné proměnné mají umístění ''-1(6)'', ''-2(6)''. Všimněte si, že ve vzorovém příkladu si program načetl délku paměti do tohoto registru. Alokaci paměťových míst samozřejmě provádí již překladač.
+Pokud nám registry nestačí, musíme používat pomocnou paměť. Pozn. profesor Louden to ve svém překladači, (viz take http://www.cs.sjsu.edu/~louden/cmptext/[překladač ke knize Compiler Construction]), provádí uložením výsledku levého podstromu na zásobník, výpočtem pravého podstromu a vyzvednutí výsledku levého podstromu ze zásobníku. Ovšem dělá to i pro triviální případy, např. `a + b`, kde bychom si vystačili s registry.
+Zásobník na pomocné proměnné lze alokovat od konce paměti, k tomu slouží onen registr 6 a záporné offsety. Tj. dočasné proměnné mají umístění `-1(6)`, `-2(6)`. Všimněte si, že ve vzorovém příkladu si program načetl délku paměti do tohoto registru. Alokaci paměťových míst samozřejmě provádí již překladač.
 
 
-==== Formát kódu programu pro Tiny Machine (výstup vaší semestrálky) ====
+=== Formát kódu programu pro Tiny Machine (výstup vaší semestrálky)
 
 
 Soubor má formát paměťového image, před samotnou interpretací se nahraje do instrukční paměti celý. To dovoluje generovat řádky strojového kódu do souboru na přeskáčku. Lze tak efektivně generovat skoky v podmíněných blocích a cyklech, u kterých neznáme délku skoku. Vynecháme si na instrukci místo, a v momentě, kdy známe délku skoku, tuto instrukci zapíšeme na současné místo v souboru, nicméně s adresou odpovídající správnému umístění. Viz například instrukce na adrese 13 ve vzorovém příkladu překladače.
 
 
 Výstup vaší semestrálky bude v následujícím formátu:
-<code>
-  0:     LD  6,0(0) 
-  1:     ST  0,0(0) 
-  2:     IN  0,0,0 
-  3:     ST  0,0(5) 
-  4:    LDC  0,0(0) 
-  5:     ST  0,0(6) 
-  6:     LD  0,0(5) 
+
+----
+  0:     LD  6,0(0)
+  1:     ST  0,0(0)
+  2:     IN  0,0,0
+  3:     ST  0,0(5)
+  4:    LDC  0,0(0)
+  5:     ST  0,0(6)
+  6:     LD  0,0(5)
 ...
-</code>
+----
+
 Číslo před dvojtečkou znamená umístění v paměti. Nedefinované pozice jsou automaticky prázdné a vyhodnoceny jako HALT.
 
 Řádky začínající symbolem hvězdičky (*) značí komentáře.
-
-~~DISCUSSION~~

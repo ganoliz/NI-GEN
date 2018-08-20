@@ -1,6 +1,7 @@
-~~anketa~~
+= 9. Generic a gimple - vnitrni formy prekladace GNU Compiler collection  
+:imagesdir: ../../media/lectures/09
 
-====== 9. Generic a gimple - vnitrni formy prekladace GNU Compiler collection  ======
-  * [[..:solutions:09:start]]
 
-{{:lectures:09:generic.pdf|}}
+* xref:../solutions/09/index#[]
+
+link:{imagesdir}/generic.pdf[generic.pdf]

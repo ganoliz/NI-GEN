@@ -1,39 +1,48 @@
-{{indexmenu_n>2000}}
+= Hodnocení 
+:imagesdir: ../media/classification
 
-====== Hodnocení ======
 
-Řádný termín jejího odevzdání bude upřesněn.  Odevzdání semestrální práce, která je hodnocena alespoň třetinou z možných bodů, je nutnou podmínkou pro získání zápočtu. Studentům bude umožněno také odevzdání semestrální práce i po řádném termínu až do konce zkouškového období, v takovém případě bude ale hodnocení práce penalizováno odečtem 50% z normálně získaných bodů. 
-  * Zápočtový test se bude psát na přednášce přibližně v 9. týdnu (bude upřesněno).
-  
-===  Klasifikace za cvičení ===
+Řádný termín jejího odevzdání bude upřesněn.  Odevzdání semestrální práce, která je hodnocena alespoň třetinou z možných bodů, je nutnou podmínkou pro získání zápočtu. Studentům bude umožněno také odevzdání semestrální práce i po řádném termínu až do konce zkouškového období, v takovém případě bude ale hodnocení práce penalizováno odečtem 50% z normálně získaných bodů.
+* Zápočtový test se bude psát na přednášce přibližně v 9. týdnu (bude upřesněno).
+
+
+==== Klasifikace za cvičení
+
 Za cvičení může student získat až 50 bodů, z toho:
 
-1. ze zápočtového testu lze získat až 20 bodů.
+​1. ze zápočtového testu lze získat až 20 bodů.
 
-2. za semestrální práci lze získat až 30 bodů.
+​2. za semestrální práci lze získat až 30 bodů.
 
-Pro udělení zápočtu je třeba získat minimálně 25 bodů. Student má nárok na jednu hromadnou centrální opravu zápočtového testu na konci semestru. Termín hromadného opravného testu na konci semestru upřesní cvičící.  
+Pro udělení zápočtu je třeba získat minimálně 25 bodů. Student má nárok na jednu hromadnou centrální opravu zápočtového testu na konci semestru. Termín hromadného opravného testu na konci semestru upřesní cvičící.
 
-=== Klasifikace za zkoušku ===
+
+==== Klasifikace za zkoušku
+
 
 Zkouška je povinná.
 
-Za písemnou část zkoušky může student získat až 50 bodů. 
+Za písemnou část zkoušky může student získat až 50 bodů.
 
 Z ústní části zkoušky s právem veta může student získat +5 až - 5 bodů.
 
 Pro získání zkoušky je potřeba získat z písemné části minimálně 25 bodů.
 
 
+== Celkové hodnocení
 
-===== Celkové hodnocení =====
 
-Hodnocení se řídí [[http://www.cvut.cz/pracoviste/pravni-odbor/dokumenty/studijni-predpisy/studijnirad.pdf|Studijním a zkušebním řádem ČVUT]].
+Hodnocení se řídí http://www.cvut.cz/pracoviste/pravni-odbor/dokumenty/studijni-predpisy/studijnirad.pdf[Studijním a zkušebním řádem ČVUT].
 
-^ Známka ^ Bodové \\ rozmezí ^ Slovní \\ hodnocení ^
-| A      | 90 a více    | výborně          |
-| B      |   80 - 89        | velmi dobře      |
-| C      |   70 - 79        | dobře            |
-| D      |   60 - 69        | uspokojivě       |
-| E      |   50 - 59       | dostatečně       |
-| F      | méně než 50 | nedostatečně     |
+[options="autowidth"]
+|====
+<h| Známka  <h| Bodové +
+rozmezí  <h| Slovní +
+hodnocení
+| A       | 90 a více     | výborně
+| B       ^|   80 - 89         | velmi dobře
+| C       ^|   70 - 79         | dobře
+| D       ^|   60 - 69         | uspokojivě
+| E       ^|   50 - 59        | dostatečně
+| F       | méně než 50  | nedostatečně
+|====

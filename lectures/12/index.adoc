@@ -1,7 +1,8 @@
-~~anketa~~
-
-====== 12. Globalni optimalizace ======
-  * [[..:solutions:12:start]]
+= 12. Globalni optimalizace 
+:imagesdir: ../../media/lectures/12
 
 
-{{:lectures:12:gen-lecture10b.pdf|}}
+* xref:../solutions/12/index#[]
+
+
+link:{imagesdir}/gen-lecture10b.pdf[gen-lecture10b.pdf]

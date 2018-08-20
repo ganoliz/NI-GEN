@@ -1,8 +1,9 @@
-~~anketa~~
+= 7. Alokace registrů 
+:imagesdir: ../../media/lectures/07
 
-====== 7. Alokace registrů ======
-  * [[..:solutions:07:start]]
 
-{{:lectures:07:gen-lecture7.pdf|}}
+* xref:../solutions/07/index#[]
 
-{{:lectures:07:gen-lecture7v2013.pdf|}}
+link:{imagesdir}/gen-lecture7.pdf[gen-lecture7.pdf]
+
+link:{imagesdir}/gen-lecture7v2013.pdf[gen-lecture7v2013.pdf]

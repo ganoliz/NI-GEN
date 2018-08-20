@@ -1,8 +1,9 @@
-====== Doporučená literatura ======
-  * Melichar, B, Češka, M. a kol.: Konstrukce překladačů. Praha, Vydavatelství ČVUT 2006.
-  * Aho, Lam, Sethi, Ullman:Compiler: Principles, Techniques and Tools (2nd ed.), Addison-Wesley, 2010.
-  * Muchnick: Advanced compiler design and implementation, Morgan Kaufman Publishers, 2009.
-  * Fischer, LeBlanc: Crafting a Compiler, 1995.
-  * Louden, K.: Compiler Construction, Thomson, 1997.
+= Doporučená literatura 
+:imagesdir: ../media/literatura
 
 
+* Melichar, B, Češka, M. a kol.: Konstrukce překladačů. Praha, Vydavatelství ČVUT 2006.
+* Aho, Lam, Sethi, Ullman:Compiler: Principles, Techniques and Tools (2nd ed.), Addison-Wesley, 2010.
+* Muchnick: Advanced compiler design and implementation, Morgan Kaufman Publishers, 2009.
+* Fischer, LeBlanc: Crafting a Compiler, 1995.
+* Louden, K.: Compiler Construction, Thomson, 1997.

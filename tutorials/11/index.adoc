@@ -1,10 +1,15 @@
-====== 11. Konzultace k semestralce =====
+= 11. Konzultace k semestralce 
+:imagesdir: ../../media/tutorials/11
 
-{{:tutorials:11:mi-gen-all-tests.tar|}}
+
+link:{imagesdir}/mi-gen-all-tests.tar[mi-gen-all-tests.tar]
 
 Upravena verse testu zde:
 
-{{:tutorials:11:tests.cpp.tar|}}
+link:{imagesdir}/tests.cpp.tar[tests.cpp.tar]
 
-====== 11. Konzultace k semestrálce (optimalizace) ======
-  * [[..:solutions:11:start]]
+
+= 11. Konzultace k semestrálce (optimalizace)
+
+
+* xref:../solutions/11/index#[]

@@ -1,17 +1,15 @@
-{{indexmenu_n>1000}}
+= Aktuality 
+:imagesdir: ../media/news
 
-====== Aktuality ======
-
-{{autoarchive>news}}
 
 Zapoctovy test se bude psat na prednasce dne 18.11.2017. Temata k testu jsou nasledujici:
-  * vnitrni formy: AST a 3AC (SSA), metody jejich generovani
-  * vyber instrukci pomoci pokryvani AST
-  * alokace registru
-  * lokalni optimalizace
+
+* vnitrni formy: AST a 3AC (SSA), metody jejich generovani
+* vyber instrukci pomoci pokryvani AST
+* alokace registru
+* lokalni optimalizace
 
 Termín náhradní/opravné písemky bude upřesněn.
 
 
 Náhradní/opravnou písemka ze semestru (pro studenty, kteří takovou písemku ještě nepsali) si je možné napsat také při každé zkoušce (v tom samém termínu ale nelze pak skládat zkoušku).
-

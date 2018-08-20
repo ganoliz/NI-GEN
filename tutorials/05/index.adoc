@@ -1,5 +1,8 @@
-====== 5. Constant Propagation =====
+= 5. Constant Propagation 
+:imagesdir: ../../media/tutorials/05
 
 
-====== 5. Konzultace k semestrálce; Seznámení se s frontendem jazyka Mila a cílovým jazykem - asemblerem virtuálního počítače Tiny Machine ======
-  * [[..:solutions:05:start]]
+= 5. Konzultace k semestrálce; Seznámení se s frontendem jazyka Mila a cílovým jazykem - asemblerem virtuálního počítače Tiny Machine
+
+
+* xref:../solutions/05/index#[]

@@ -1,2 +1,5 @@
-====== 4. - ======
-  * [[..:solutions:04:start]]
+= 4. - 
+:imagesdir: ../../media/tutorials/04
+
+
+* xref:../solutions/04/index#[]
