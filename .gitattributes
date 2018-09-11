@@ -13,23 +13,26 @@
 *.jpg  binary
 *.png  binary
 
+# Documents
+*.doc  binary
+*.docx binary
+*.odp  binary
+*.ods  binary
+*.odt  binary
+*.pdf  binary
+*.ppt  binary
+*.pptx binary
+*.rtf  binary
+*.xls  binary
+*.xlsx binary
+
+# Misc
+*.nb   binary
+
 
 #=================== Git LFS ====================#
 
 # Binary files tracked by Git LFS.
-
-# Documents
-*.doc  lfs 
-*.docx lfs 
-*.odp  lfs 
-*.ods  lfs 
-*.odt  lfs 
-*.pdf  lfs 
-*.ppt  lfs 
-*.pptx lfs 
-*.rtf  lfs 
-*.xls  lfs 
-*.xlsx lfs 
 
 # Archives
 *.cpio lfs
@@ -53,6 +56,7 @@
 *.tgz  lfs
 *.war  lfs
 *.zip  lfs
+*.zip.[0-9]* lfs
 
 # Graphics
 *.tiff lfs
@@ -87,5 +91,4 @@
 *.vmi  lfs
 
 # Misc
-*.nb   binary
 *.swf  lfs
