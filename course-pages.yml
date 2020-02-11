@@ -1,11 +1,11 @@
 course:
   code: MI-GEN
   name: Generování kódu
-semester: B172
+semester: B192
 language: cs
 navigation:
   hiddenFiles:
     - media/*
     - README.*
 repository:
-  gitlabPath: /edux-export/MI-GEN
+  gitlabPath: /MI-GEN/mi-gen
