@@ -1,11 +1,11 @@
 course:
-  code: MI-GEN
+  code: NI-GEN
+  altCodes: [ MI-GEN ]
   name: Generování kódu
-semester: B192
 language: cs
 navigation:
   hiddenFiles:
     - media/*
     - README.*
 repository:
-  gitlabPath: /MI-GEN/mi-gen
+  gitlabPath: /NI-GEN/ni-gen
