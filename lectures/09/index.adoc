@@ -1,7 +1,0 @@
-= 9. Generic a gimple - vnitrni formy prekladace GNU Compiler collection  
-:imagesdir: ../../media/lectures/09
-
-
-* xref:../solutions/09/index#[]
-
-link:{imagesdir}/generic.pdf[generic.pdf]

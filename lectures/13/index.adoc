@@ -1,5 +1,0 @@
-= 13. Rezerva 
-:imagesdir: ../../media/lectures/13
-
-
-* xref:../solutions/13/index#[]

@@ -1,7 +1,0 @@
-= 1. Úvod, struktura překladače, jeho zadnÍ části (backendu), vnitřní formy (AST, tříadresový lineární kód) 
-:imagesdir: ../../media/lectures/01
-
-
-* xref:../solutions/01/index#[]
-
-link:{imagesdir}/gen-prednaska1-2016.pdf[gen-prednaska1-2016.pdf]

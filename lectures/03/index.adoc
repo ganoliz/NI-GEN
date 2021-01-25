@@ -1,9 +1,0 @@
-= 3.  Vnitřní reprezentace překladače LLVM 
-:imagesdir: ../../media/lectures/03
-
-
-* xref:../solutions/03/index#[]
-
-
-link:{imagesdir}/llvm-bitcode.pdf[llvm-bitcode.pdf]
-link:{imagesdir}/gen-prednaska3.pdf[gen-prednaska3.pdf]

@@ -1,7 +1,0 @@
-= 2. Vnitřní reprezentace překladače GNU Compiler collection (gcc) 
-:imagesdir: ../../media/lectures/02
-
-
-* xref:../solutions/02/index#[]
-
-link:{imagesdir}/gen-prednaska2.pdf[gen-prednaska2.pdf]

@@ -1,0 +1,20 @@
+NOTE: This is the first year of the new course and as such there will likely be some issues with the course organization or materials. Please let us know any problems or comments you may have. We will listen!
+
+= Welcome
+
+Welcome to the new Code Generators course!
+
+
+
+== Languages
+
+Since the coursework is a `C`-like language compiler written in `C++`, familiarity with `C++` is essential.
+
+_All course materials materials (including this webpage) will be in English, but lectures and tutorials themselves will be in Czech (optionally if we get english-only speaking students), we will use English as well. You can use Czech/English freely_. 
+
+
+
+
+
+
+

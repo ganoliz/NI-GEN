@@ -1,0 +1,9 @@
+= Literature
+
+_The Dragon Book_:
+
+Aho, A. V., Lam, M. S., Sethi, R., Ullman, J. D. ''Compilers: Principles, Techniques, and Tools (2nd Edition)''. Addison Wesley, 2006. ISBN 0321486811.
+
+_Others_:
+
+Wirth, N. ''Compiler Construction''. Addison-Wesley, 1996. ISBN 0201403536.

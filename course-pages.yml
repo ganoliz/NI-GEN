@@ -1,11 +1,14 @@
 course:
   code: NI-GEN
   altCodes: [ MI-GEN ]
-  name: Generování kódu
-language: cs
+  name: Code Generators
+language: en
 navigation:
   hiddenFiles:
     - media/*
     - README.*
+    - build/*
+    - course-pages/*
+    - Makefile
 repository:
   gitlabPath: /NI-GEN/ni-gen

@@ -1,7 +1,0 @@
-= 4. Runtime prostředí; tříadresový kód, základní blok, graf toku řízení, mezikód pro zásobníkový počítač 
-:imagesdir: ../../media/lectures/04
-
-
-* xref:../solutions/04/index#[]
-
-link:{imagesdir}/gen-lecture4.pdf[gen-lecture4.pdf]

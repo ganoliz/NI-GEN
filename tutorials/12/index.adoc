@@ -1,5 +1,0 @@
-= 12. - 
-:imagesdir: ../../media/tutorials/12
-
-
-* xref:../solutions/12/index#[]

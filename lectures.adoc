@@ -1,0 +1,51 @@
+= Lectures
+
+IMPORTANT: Due to COVID-19 situation, the exact details of how lectures & tutorials will happen in Spring 2021 is uncertain at this time. 
+
+NOTE: As this is the first year of the course, the syllabus below may change during the term. 
+
+_There will be a total of 12 lectures in the term._ The following list gives a brief information about the main lectures and topics:
+
+==== 1 - Overview of a Compiler
+
+_Basic overview of a modern compiler and its consituent parts (frontend, middleend, backend, assembler, linker) and recap of basic features (object files, static vs dynamic linkage, etc.). Coursework and course information._
+
+==== 2 - Basic Principles of Compiled Code
+
+_Details about how compiled code actually works. Types. Information about calling conventions, stack frames, variables, symbols and visibility. Memory areas (heap, stack, globals). Compilation units (modules, functions, basic blocks). Control and Data Flow graphs._
+
+==== 3 - Internal Representation
+
+_Introduction and analysis of advantages and disadvantages of various internal representations (Stack Based, 3AC, SSA, Sea of Nodes). Design of intermediate representation suitable for `tinyC`._  
+
+==== 4 - Syntax Directed Translation
+
+_Building on the theory covered so far, a practical lecture showing how to compile various aspects of the language down to different itermediate representations._
+
+==== 5 - Compilation of Advanced Constructs
+
+_Compilation of advanced language constructs (objects, virtual functions & dispatch, exceptions, templates). Zero-cost abstractions._
+
+==== 6, 7 - Optimization I, II
+
+_An introduction to the intermediate representation optimizer. Local vs Global optimizations. Description of various optimizations, such as peepholer, constant propagation, alias analysis, inlining, loop unrolling, etc. and how they are calculated for the different intermediate representations. The analysis-optimization relationship and scheduling. Link-Time Optimization (LTO) and Profile-Guided-Optimization (PGO)._
+
+==== 8 - Instruction Scheduling and Code Layout
+
+_Instruction scheduling and code layout algorithms._
+
+==== 9 - Register Allocation, Code Generation
+
+_Register allocation and the rest of code generation._
+
+==== 10 - Case Study - LLVM Compiler Infrastructure
+
+_Introduction to LLVM, how it approaches the things we said so far. I.e. the overview of the IR, interesting instructions. How optimizations are done (scheduler, etc). Backend support. Comparison of other compiler suites_
+
+==== 11 - Just-in-Time Compilation [MID]
+
+_Introduction to JIT. Speculative Execution, Multi-tier architecture. Patchpoints. GC. Languages that suppport JIT compilers (JavaScript, Java, Julia, .NET)._
+
+==== 12 - Debugging Support
+
+_How to debug compiled code. Breakpoints. Debugging symbols. Debugging optimized code._

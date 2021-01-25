@@ -1,8 +1,35 @@
-= Cvičení 
-:imagesdir: ../media/tutorials
+= Tutorials
 
+IMPORTANT: Due to COVID-19 situation, the exact details of how lectures & tutorials will happen in Spring 2021 is uncertain at this time. 
 
-Materiály k semestrální práci lze nalézt zde: xref:../semestral-work/index#[].
+_There are 6 tutorials throughout the term (every fortnight)._ The first two tutorials are more of a lecture format and intridude the `tinyC` language and the backend, `tiny86` in more details. The rest of the tutorials are intended as consultations about the course projects when student may come and discuss their solutions or issues. Tutorials 3 and 6 are compulsory as the progress of the coursework is checked. 
 
+==== Tutorial 1
 
-Materiály ke starší semestrální práci lze nalézt zde: xref:../semestral-work/index#[].
+_Introduction to the tiny languages framework and `tinyC`._
+
+==== Tutorial 2
+
+NOTE: `tinyC` parser should be almost ready so that you can plug it in the `tiny86` backend. 
+
+_Introduction to the `tiny86` backend. Guest tutorial by Ivo Strejc, author of `tiny86`._ 
+
+==== Tutorial 3
+
+IMPORTANT: Checkpoint: Unoptimized hello world should compiler and run. 
+
+_Q&A: frontend and translation_
+
+==== Tutorial 4
+
+NOTE: Basic intermediate optimizations should be at least drafted. 
+
+_Q&A: internal representation optimizations_
+
+==== Tutorial 5
+
+_Q&A: backend optimizations_ 
+
+==== Tutorial 6
+
+IMPORTANT: Checkpoint: Final project and grading.

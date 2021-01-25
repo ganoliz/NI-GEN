@@ -1,48 +1,37 @@
-= Hodnocení 
-:imagesdir: ../media/classification
+= Classification
 
+_There is a reasonably large course project (60% of the grade) and a final exam (40% of the grade)_
 
-Řádný termín jejího odevzdání bude upřesněn.  Odevzdání semestrální práce, která je hodnocena alespoň třetinou z možných bodů, je nutnou podmínkou pro získání zápočtu. Studentům bude umožněno také odevzdání semestrální práce i po řádném termínu až do konce zkouškového období, v takovém případě bude ale hodnocení práce penalizováno odečtem 50% z normálně získaných bodů.
-* Zápočtový test se bude psát na přednášce přibližně v 9. týdnu (bude upřesněno).
+==== Project
 
+The course project is to implement a minimally optimizing compiler for `tinyC`, a simple c-like language. There is a baseline functionality that each compiler must support on top of which you must choose and implement a few more advanced topics. Points are awarded for the completion of the baseline functionality and for finishing the selected extra features. Additional points will be given to fastest and most memory efficient implementations. 
 
-==== Klasifikace za cvičení
+NOTE: As this is first year of the course, details about the project will be added throughout the term. 
 
-Za cvičení může student získat až 50 bodů, z toho:
+==== Exam
 
-​1. ze zápočtového testu lze získat až 20 bodů.
+The exam consists of two parts, a written test where you will be asked about the theoretical algorithms covered in the lectures and and an oral part where you answers from the test will be discussed. 
 
-​2. za semestrální práci lze získat až 30 bodů.
+Each student has 3 exam takes. If you fail the course, you can (must if it is a compulsory course in your program) attempt to study it one more time, at which point you _must_ pass the course, or you fail your whole study program.
 
-Pro udělení zápočtu je třeba získat minimálně 25 bodů. Student má nárok na jednu hromadnou centrální opravu zápočtového testu na konci semestru. Termín hromadného opravného testu na konci semestru upřesní cvičící.
+==== Final Marks
 
-
-==== Klasifikace za zkoušku
-
-
-Zkouška je povinná.
-
-Za písemnou část zkoušky může student získat až 50 bodů.
-
-Z ústní části zkoušky s právem veta může student získat +5 až - 5 bodů.
-
-Pro získání zkoušky je potřeba získat z písemné části minimálně 25 bodů.
-
-
-== Celkové hodnocení
-
-
-Hodnocení se řídí http://www.cvut.cz/pracoviste/pravni-odbor/dokumenty/studijni-predpisy/studijnirad.pdf[Studijním a zkušebním řádem ČVUT].
+Classification is governed by http://www.cvut.cz/pracoviste/pravni-odbor/dokumenty/studijni-predpisy/studijnirad.pdf[Study and Examination Rules].
 
 [options="autowidth"]
 |====
-<h| Známka  <h| Bodové +
-rozmezí  <h| Slovní +
-hodnocení
-| A       | 90 a více     | výborně
-| B       ^|   80 - 89         | velmi dobře
-| C       ^|   70 - 79         | dobře
-| D       ^|   60 - 69         | uspokojivě
-| E       ^|   50 - 59        | dostatečně
-| F       | méně než 50  | nedostatečně
+<h| Mark  <h| Points
+| A       | 90 and more     
+| B       ^|   80 - 89
+| C       ^|   70 - 79
+| D       ^|   60 - 69
+| E       ^|   50 - 59
+| F       | less than 50 (fail)
 |====
+
+==== Conduct
+
+Throughout the course, you are expected to finish all tasks on your own. You are encouraged to discuss your solutions with other students, but all work you submit must be your own and all code submissions will be accompanied by questions about the code you must be able to answer. 
+
+Any attempts to cheat will be dealt with according to the rules above, and may cost you a mark from the course.
+

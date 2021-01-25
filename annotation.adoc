@@ -1,0 +1,3 @@
+= Annotation
+
+Students will become acquainted with both theoretical and practical aspects of back-end of an optimizing programming language compiler.

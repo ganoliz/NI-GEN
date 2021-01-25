@@ -1,5 +1,0 @@
-= 10. - 
-:imagesdir: ../../media/tutorials/10
-
-
-* xref:../solutions/10/index#[]

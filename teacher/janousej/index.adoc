@@ -1,6 +1,0 @@
-= doc. Ing. Jan Janoušek, Ph.D. 
-:imagesdir: ../../media/teacher/janousej
-
-
-* kontakt: http://users.fit.cvut.cz/~janousej/
-* Arbology research: http://www.arbology.org/

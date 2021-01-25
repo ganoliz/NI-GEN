@@ -1,5 +1,0 @@
-= 13. Konzultace k semestrálce 
-:imagesdir: ../../media/tutorials/13
-
-
-* xref:../solutions/13/index#[]

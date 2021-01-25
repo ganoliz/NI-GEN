@@ -1,9 +1,0 @@
-= 7. Alokace registrů 
-:imagesdir: ../../media/lectures/07
-
-
-* xref:../solutions/07/index#[]
-
-link:{imagesdir}/gen-lecture7.pdf[gen-lecture7.pdf]
-
-link:{imagesdir}/gen-lecture7v2013.pdf[gen-lecture7v2013.pdf]

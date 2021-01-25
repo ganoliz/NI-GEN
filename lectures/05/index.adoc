@@ -1,9 +1,0 @@
-= 5. Generování cílového kódu: Úvod do problému výběru instrukcí na základě AST, Graham-Glanvillova metoda - úvod 
-:imagesdir: ../../media/lectures/05
-
-
-* xref:../solutions/05/index#[]
-
-link:{imagesdir}/../../gen-lecture5.pdf[gen-lecture5.pdf]
-
-link:{imagesdir}/lr-parsing.pdf[lr-parsing.pdf]

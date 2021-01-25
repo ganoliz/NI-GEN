@@ -1,8 +1,0 @@
-= 12. Globalni optimalizace 
-:imagesdir: ../../media/lectures/12
-
-
-* xref:../solutions/12/index#[]
-
-
-link:{imagesdir}/gen-lecture10b.pdf[gen-lecture10b.pdf]

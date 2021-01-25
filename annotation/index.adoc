@@ -1,5 +1,0 @@
-= Anotace 
-:imagesdir: ../media/annotation
-
-
-Studenti se seznámí s teoretickou i praktickou stránkou realizace zadní části optimalizujícího překladače programovacího jazyka.
