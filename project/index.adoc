@@ -1,0 +1,28 @@
+= Project
+
+WARNING: The project is a large part of the grade (60%) and is a lot of work. You should start developing it early and make a regular progress throughout the term.
+
+The term-long project is an implementation of a small `C`-like language for our idealized backend. This consists of finishing a parser, translating the ASTs to an intermediate language of your design, performing various optimizations and then producing target assembly, i.e. a very brief taste of all the main things compiler has to do.
+
+## Formalities
+
+You must create a git repo for your project (gitlab at CTU is preferred, but you can use any git hosting to which we can get read access). Work in the project must be yours and should be incremental, i.e. git log should show a reasonable number of commits for the different features. The project must be in C++ and use the `tinyverse` platform. 
+
+There will be one mandatory check in the middle of the term and a final check and grading at the end of the term. In reasonable circumstances (you want more time to implement some feature, etc.) grading may be postponed till your exam, but _not_ if you haven't started working on the project yet. 
+
+Make sure to follow some reasonable development practices. It will make the development easier for you and grading easier for us.
+
+#### Teams 
+
+We don't expect students to pair up in teams. In very special circumstances, we may agree to a team, but note that this always at least doubles the ammount of features you will have to implement. If working in a team, responsibilities of team members must be clear and agreed upon beforehand (so that we can make sure the work is evenly distributed in terms of hours _and_ topics covered).
+
+## Specification
+
+TODO
+
+## Alternative projects
+
+In theory, alternative project ideas may be accepted after previous discussion with us. These will have to be equaly large projects that sit firmly in the code generation area. Possible candidates are various backends (LLVM, RISC-V) for `tinyC`, or different languages (object oriented, functional, etc.).
+
+NOTE: Since the projects are lot of work to begin with, a lot of them can be developed into a master thesis. Talk to us if you might be interested in pursuing this. 
+
