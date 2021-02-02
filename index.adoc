@@ -1,16 +1,83 @@
-NOTE: This is the first year of the new course and as such there will likely be some issues with the course organization or materials. Please let us know any problems or comments you may have. We will listen!
-
 = Welcome
+
+IMPORTANT: The course is currently under development. Although the information presented here is mostly accurate if you want to know the general course information, but details, such as grading and project details will be likely changed and you should not rely on them. Everything can change. 
+
+NOTE: This is the first year of the new course and as such there will likely be some issues with the course organization or materials. Please let us know any problems or comments you may have. We will listen!
 
 Welcome to the new Code Generators course!
 
+= Schedule
 
+[%autowidth]
+|===
+| # | Lecture | Tutorial | Project  
+
+| 1 
+| Compiler Overview
+|
+|
+
+| 2
+| Principles of Compiled Code
+| tinyC Language and tiny86 VM
+|
+
+| 3
+| Semantic Analysis & Translation
+|
+|
+
+| 4
+| Internal Representations
+| Q&A: Frontend and Translation
+|
+
+| 5
+| Optimization I
+| 
+|
+
+| 6 
+| Optimization II
+| Q&A: Internal Representation
+| minimal compilation 
+
+| 7
+| Instruction Scheduling & Code Layout
+|
+|
+
+| 8
+| Register Allocation, Code Generation
+| Q&A: IR Optimizations 
+|
+
+| 9
+| Compilation of Advanced Constructs
+|
+|
+
+| 10 
+| Case Study - LLVM Compiler
+| Q&A: Backend
+| full unoptimized, some IR opts
+
+| 11
+| Just-in-Time Compilation
+|
+|
+
+| 12
+| Debugging Support
+| Q&A: Advanced Techniques
+| Backend Optimizations
+|===
 
 == Languages
 
 Since the coursework is a `C`-like language compiler written in `C++`, familiarity with `C++` is essential.
 
-_All course materials materials (including this webpage) will be in English, but lectures and tutorials themselves will be in Czech (optionally if we get english-only speaking students), we will use English as well. You can use Czech/English freely_. 
+_All course materials materials (including this webpage) will be in English, but lectures and tutorials themselves will be in Czech (optionally, if we get english-only speaking students, we will use English as well). You can use Czech/English freely_. 
 
 
 

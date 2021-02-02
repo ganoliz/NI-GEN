@@ -8,35 +8,35 @@ _There will be a total of 12 lectures in the term._ The following list gives a b
 
 ==== 1 - Overview of a Compiler
 
-_Basic overview of a modern compiler and its consituent parts (frontend, middleend, backend, assembler, linker) and recap of basic features (object files, static vs dynamic linkage, etc.). Coursework and course information._
+_Basic overview of a modern compiler and its consituent parts (frontend, middleend, backend, assembler, linker) and recap of basic features. Coursework and course information._
 
-==== 2 - Basic Principles of Compiled Code
+==== 2 - Principles of Compiled Code
 
-_Details about how compiled code actually works. Types. Information about calling conventions, stack frames, variables, symbols and visibility. Memory areas (heap, stack, globals). Compilation units (modules, functions, basic blocks). Control and Data Flow graphs._
+_Details about how compiled code actually works. Types. Information about calling conventions, stack frames, variables, symbols and visibility. Memory areas (heap, stack, globals). Compilation units (modules, functions, basic blocks). Object files, static vs dynamic linkage, etc._
 
-==== 3 - Internal Representation
+==== 3 - Semantic Analysis and Translation
 
-_Introduction and analysis of advantages and disadvantages of various internal representations (Stack Based, 3AC, SSA, Sea of Nodes). Design of intermediate representation suitable for `tinyC`._  
+_Scopes and their checking. Symbol table. Inference rules. Types and type checking. Practical demonstration of how some tinyC constructs can be translated to tiny86._
 
-==== 4 - Syntax Directed Translation
+==== 3 - Internal Representations
 
-_Building on the theory covered so far, a practical lecture showing how to compile various aspects of the language down to different itermediate representations._
+_Introduction and analysis of advantages and disadvantages of various internal representations (Stack Based, 3AC, SSA, Sea of Nodes). Design of intermediate representation suitable for `tinyC`. Control and Data Flow graphs._  
 
-==== 5 - Compilation of Advanced Constructs
-
-_Compilation of advanced language constructs (objects, virtual functions & dispatch, exceptions, templates). Zero-cost abstractions._
-
-==== 6, 7 - Optimization I, II
+==== 5, 6 - Optimization I, II
 
 _An introduction to the intermediate representation optimizer. Local vs Global optimizations. Description of various optimizations, such as peepholer, constant propagation, alias analysis, inlining, loop unrolling, etc. and how they are calculated for the different intermediate representations. The analysis-optimization relationship and scheduling. Link-Time Optimization (LTO) and Profile-Guided-Optimization (PGO)._
 
-==== 8 - Instruction Scheduling and Code Layout
+==== 7 - Instruction Scheduling and Code Layout
 
 _Instruction scheduling and code layout algorithms._
 
-==== 9 - Register Allocation, Code Generation
+==== 8 - Register Allocation, Code Generation
 
 _Register allocation and the rest of code generation._
+
+==== 9 - Compilation of Advanced Constructs
+
+_Compilation of advanced language constructs (objects, virtual functions & dispatch, exceptions, templates). Zero-cost abstractions._
 
 ==== 10 - Case Study - LLVM Compiler Infrastructure
 

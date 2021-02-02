@@ -2,34 +2,34 @@
 
 IMPORTANT: Due to COVID-19 situation, the exact details of how lectures & tutorials will happen in Spring 2021 is uncertain at this time. 
 
-_There are 6 tutorials throughout the term (every fortnight)._ The first two tutorials are more of a lecture format and intridude the `tinyC` language and the backend, `tiny86` in more details. The rest of the tutorials are intended as consultations about the course projects when student may come and discuss their solutions or issues. Tutorials 3 and 6 are compulsory as the progress of the coursework is checked. 
+_There are 6 tutorials throughout the term (every fortnight)._ The first tutorial is more of a lecture, where details about the language and target used for your projects will be given. The rest of the tutorials follow the same template: A Q&A section where we will be discussing the details and tradeoffs of your solutions, or any ideas you might have. Bring your own questions and don't be shy. 
+
+On some tutorials, there are checkpoints, at which you will be required to show that your project passes some minimal requirements at the time. 
 
 ==== Tutorial 1
 
-_Introduction to the tiny languages framework and `tinyC`._
+_Introduction to the tiny languages framework, the `tinyC` language and the `tiny86` virtual machine._
 
 ==== Tutorial 2
 
-NOTE: `tinyC` parser should be almost ready so that you can plug it in the `tiny86` backend. 
-
-_Introduction to the `tiny86` backend. Guest tutorial by Ivo Strejc, author of `tiny86`._ 
+_Q&A: Frontend and Translation, where we will discuss actual issues you might have when implementing the translation from tinyC ASTs to the target, or intermediate representation._
 
 ==== Tutorial 3
 
-IMPORTANT: Checkpoint: Unoptimized hello world should compiler and run. 
+IMPORTANT: Checkpoint: Minimal compilation, i.e. a simple program (basic functions, ints, basic statements) should compile and execute on a target.
 
-_Q&A: frontend and translation_
+_Q&A: Design and implementation choices in your intermediate representation_
 
 ==== Tutorial 4
 
-NOTE: Basic intermediate optimizations should be at least drafted. 
-
-_Q&A: internal representation optimizations_
+_Q&A: IR Optimizations_
 
 ==== Tutorial 5
+
+IMPORTANT: Checkpoint: full unoptimized tinyC should execute. IR optimizations (at least some) should be implemented. 
 
 _Q&A: backend optimizations_ 
 
 ==== Tutorial 6
 
-IMPORTANT: Checkpoint: Final project and grading.
+IMPORTANT: Checkpoint: Backend optimizations in at least some form. I.e. not everything has to work, but some things must be done. 

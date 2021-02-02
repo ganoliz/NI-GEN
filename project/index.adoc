@@ -2,23 +2,23 @@
 
 WARNING: The project is a large part of the grade (60%) and is a lot of work. You should start developing it early and make a regular progress throughout the term.
 
-The term-long project is an implementation of a small `C`-like language for our idealized backend. This consists of finishing a parser, translating the ASTs to an intermediate language of your design, performing various optimizations and then producing target assembly, i.e. a very brief taste of all the main things compiler has to do.
+The beauty of compilers comes in part from the fact that here, the saying that _"the devil lies in the details"_ is more pronounced than in many other parts of CS. This is something that cannot be taught in lectures alone, but requires a lot of own work. 
+
+To this end the term-long project is an implementation of a small `C`-like language for our idealized backend. This consists of finishing a parser, translating the ASTs to an intermediate language of your design, performing various optimizations and then producing target assembly, i.e. a very brief taste of all the main things compiler has to do.
 
 ## Formalities
 
 You must create a git repo for your project (gitlab at CTU is preferred, but you can use any git hosting to which we can get read access). Work in the project must be yours and should be incremental, i.e. git log should show a reasonable number of commits for the different features. The project must be in C++ and use the `tinyverse` platform. 
 
-There will be one mandatory check in the middle of the term and a final check and grading at the end of the term. In reasonable circumstances (you want more time to implement some feature, etc.) grading may be postponed till your exam, but _not_ if you haven't started working on the project yet. 
+There will be mandatory checks throughout the term during which you should demonstrate that your project has reasonably evolved. These are not to force strict deadlines on your part, but to allow the instructors to quickly see if you are progressing well, since failure is almost guaranteed if you leave all the project work to the last days available. 
+
+To hand in the project, book a date _before_ your exam with your instructor or TA. 
 
 Make sure to follow some reasonable development practices. It will make the development easier for you and grading easier for us.
 
 #### Teams 
 
 We don't expect students to pair up in teams. In very special circumstances, we may agree to a team, but note that this always at least doubles the ammount of features you will have to implement. If working in a team, responsibilities of team members must be clear and agreed upon beforehand (so that we can make sure the work is evenly distributed in terms of hours _and_ topics covered).
-
-## Specification
-
-TODO
 
 ## Alternative projects
 
