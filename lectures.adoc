@@ -1,8 +1,6 @@
 = Lectures
 
-IMPORTANT: Due to COVID-19 situation, the exact details of how lectures & tutorials will happen in Spring 2021 is uncertain at this time. 
-
-NOTE: As this is the first year of the course, the syllabus below may change during the term. 
+IMPORTANT: Due to COVID-19 situation, the course will be held online in Spring 2021. All lectures and tutorials will happen over teams. 
 
 _There will be a total of 12 lectures in the term._ The following list gives a brief information about the main lectures and topics:
 

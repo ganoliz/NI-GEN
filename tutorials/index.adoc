@@ -1,6 +1,6 @@
 = Tutorials
 
-IMPORTANT: Due to COVID-19 situation, the exact details of how lectures & tutorials will happen in Spring 2021 is uncertain at this time. 
+IMPORTANT: Due to COVID-19 situation, the course will be held online in Spring 2021. All lectures and tutorials will happen over teams. 
 
 _There are 6 tutorials throughout the term (every fortnight)._ The first tutorial is more of a lecture, where details about the language and target used for your projects will be given. The rest of the tutorials follow the same template: A Q&A section where we will be discussing the details and tradeoffs of your solutions, or any ideas you might have. Bring your own questions and don't be shy. 
 

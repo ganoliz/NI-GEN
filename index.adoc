@@ -1,8 +1,8 @@
 = Welcome
 
-IMPORTANT: The course is currently under development. Although the information presented here is mostly accurate if you want to know the general course information, but details, such as grading and project details will be likely changed and you should not rely on them. Everything can change. 
+IMPORTANT: Due to COVID-19 situation, the course will be held online in Spring 2021. All lectures and tutorials will happen over teams. 
 
-NOTE: This is the first year of the new course and as such there will likely be some issues with the course organization or materials. Please let us know any problems or comments you may have. We will listen!
+IMPORTANT: The course is currently under development. Although the information presented here is mostly accurate if you want to know the general course information, but details, such as grading and project details will be likely changed and you should not rely on them. Everything can change. 
 
 Welcome to the new Code Generators course!
 
