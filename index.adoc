@@ -13,7 +13,7 @@ Welcome to the new Code Generators course!
 | # | Lecture | Tutorial | Project  
 
 | 1 
-| Compiler Overview
+| link:media/NI-GEN-1.pdf[Compiler Overview]
 |
 |
 
@@ -23,32 +23,32 @@ Welcome to the new Code Generators course!
 |
 
 | 3
-| Semantic Analysis & Translation
+| Semantic Analysis
 |
 |
 
 | 4
-| Internal Representations
+| Translation
 | Q&A: Frontend and Translation
 |
 
 | 5
-| Optimization I
+| Internal Representations
 | 
 |
 
 | 6 
-| Optimization II
+| Optimization I
 | Q&A: Internal Representation
 | minimal compilation 
 
 | 7
-| Instruction Scheduling & Code Layout
+| Optimization II
 |
 |
 
 | 8
-| Register Allocation, Code Generation
+| Register Allocation, Instruction Selection & Scheduling, Code Layout & Generation
 | Q&A: IR Optimizations 
 |
 
