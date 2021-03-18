@@ -1,5 +1,7 @@
 = Project
 
+IMPORTANT: The project repo is available at link:https://gitlab.fit.cvut.cz/NI-GEN/tinyc[https://gitlab.fit.cvut.cz/NI-GEN/tinyc]
+
 WARNING: The project is a large part of the grade (60%) and is a lot of work. You should start developing it early and make a regular progress throughout the term.
 
 The beauty of compilers comes in part from the fact that here, the saying that _"the devil lies in the details"_ is more pronounced than in many other parts of CS. This is something that cannot be taught in lectures alone, but requires a lot of own work. 
