@@ -18,42 +18,43 @@ Welcome to the new Code Generators course!
 |
 
 | 2
-| Principles of Compiled Code
-| tinyC Language and tiny86 VM
-|
+| link:media/NI-GEN-2.pdf[Principles of Compiled Code]
+| Target Architectures Overview
+| 
 
 | 3
-| Semantic Analysis
-|
-|
-
-| 4
-| Translation
-| Q&A: Frontend and Translation
-|
-
-| 5
-| Internal Representations
+| tinyC language and tiny86 target (live coding)
 | 
 |
 
-| 6 
-| Optimization I
-| Q&A: Internal Representation
-| minimal compilation 
+
+| 4
+| link:media/NI-GEN-3.pdf[Internal Representations]
+| Syntax-Directed Translation to IR
+|
+
+| 5
+| Semantic Analysis (live coding)
+| 
+|
+
+| 6
+| Translation
+| Q&A: Internal Representation & Translation 
+|
 
 | 7
-| Optimization II
+| Optimization
 |
 |
 
 | 8
 | Register Allocation, Instruction Selection & Scheduling, Code Layout & Generation
 | Q&A: IR Optimizations 
-|
+| minimal compilation to IR
 
 | 9
-| Compilation of Advanced Constructs
+| Target Translation
 |
 |
 

@@ -8,19 +8,21 @@ On some tutorials, there are checkpoints, at which you will be required to show 
 
 ==== Tutorial 1
 
-_Introduction to the tiny languages framework, the `tinyC` language and the `tiny86` virtual machine._
+//_Introduction to the tiny languages framework, the `tinyC` language and the `tiny86` virtual machine._
+
+_Recapitulation of basic target architectures (CISC, RISC, EPIC, VLIW), CPU pipelines, super-scalar and out-of-order execution, VLIW_.
 
 ==== Tutorial 2
 
-_Q&A: Frontend and Translation, where we will discuss actual issues you might have when implementing the translation from tinyC ASTs to the target, or intermediate representation._
+_Recapitulation of basic techniques for syntax-directed translation of basic language constructs._
 
 ==== Tutorial 3
-
-IMPORTANT: Checkpoint: Minimal compilation, i.e. a simple program (basic functions, ints, basic statements) should compile and execute on a target.
 
 _Q&A: Design and implementation choices in your intermediate representation_
 
 ==== Tutorial 4
+
+IMPORTANT: Checkpoint: Minimal compilation, i.e. a simple program (basic functions, ints, basic statements) should compile and execute on a target.
 
 _Q&A: IR Optimizations_
 

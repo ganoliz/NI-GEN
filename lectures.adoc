@@ -8,38 +8,40 @@ _There will be a total of 12 lectures in the term._ The following list gives a b
 
 _Basic overview of a modern compiler and its consituent parts (frontend, middleend, backend, object files, linker, assembler) and recap of basic features. Coursework and course information._
 
-// Almost done. Normal slides. 
+// slides
 
-==== 2 - Principles of Compiled Code
+==== 2 - link:media/NI-GEN-2.pdf[Principles of Compiled Code]
 
-_Details about how compiled code actually works. Information about calling conventions, stack frames, variables, symbols and visibility. Memory areas (heap, stack, globals), alignment. Compilation units (modules, functions, basic blocks). Object files, static vs dynamic linkage, etc._
+_Details about how compiled code actually works. Information about calling conventions, stack frames, variables, symbols and visibility. Memory areas (heap, stack, globals), alignment. Compilation units (modules, functions, basic blocks). Object files, static vs dynamic linkage, etc. Target architectures._
 
-// Normal slides
-//  
-//
-//
-//
-//
-//
-//
+// slides, was too long and so spilled to that week's tutorial as well
 
-==== 3 - Semantic Analysis
+==== 3 - Introduction to tinyC and tiny86
+
+_Introduction to the course project structure, the tinyC language and the tiny86 target architecture you will be using in the class._
+
+// this should eventually go to first tutorial instead of spillover from architectures
+
+==== 4 - link:media/NI-GEN-3.pdf[Internal Representations]
+
+_Introduction and analysis of advantages and disadvantages of various internal representations (Stack Based, 3AC, SSA, Sea of Nodes). Design of intermediate representation suitable for `tinyC`. Control and Data Flow graphs._  
+
+// slides
+
+==== 5 - Semantic Analysis(live coding)
 
 _Scopes and their checking. Symbol table. Inference rules. Types and type checking._
 
 // Normal slides
 
-==== 4 - Translation
+==== 6 - Translation
 
-_Practical demonstration of how some tinyC constructs can be translated to tiny86. Patchpoints, spilling._
+_Practical demonstration of how some tinyC constructs can be translated to tiny86. _
 
 // Live coding. 
 
-==== 5 - Internal Representations
 
-_Introduction and analysis of advantages and disadvantages of various internal representations (Stack Based, 3AC, SSA, Sea of Nodes). Design of intermediate representation suitable for `tinyC`. Control and Data Flow graphs._  
-
-==== 6, 7 - Optimization I, II
+==== 7 - Optimization
 
 _An introduction to the intermediate representation optimizer. Local vs Global optimizations. Description of various optimizations, such as peepholer, constant propagation, alias analysis, inlining, loop unrolling, etc. and how they are calculated for the different intermediate representations. The analysis-optimization relationship and scheduling. Link-Time Optimization (LTO) and Profile-Guided-Optimization (PGO)._
 
@@ -47,9 +49,9 @@ _An introduction to the intermediate representation optimizer. Local vs Global o
 
 _Register allocation techniques. The importance of instruction selection, scheduling and code layout. Generation of machine code or assembler._
 
-==== 9 - Compilation of Advanced Constructs
+==== 9 - Target Translation.
 
-_Compilation of advanced language constructs (objects, virtual functions & dispatch, exceptions, templates). Zero-cost abstractions._
+_Compiling to target architecture. Patchpoints, register spilling. Compilation of advanced language constructs (objects, virtual functions & dispatch, exceptions, templates). Zero-cost abstractions._
 
 ==== 10 - Case Study - LLVM Compiler Infrastructure
 
