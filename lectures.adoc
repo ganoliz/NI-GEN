@@ -22,7 +22,7 @@ _Introduction to the course project structure, the tinyC language and the tiny86
 
 // this should eventually go to first tutorial instead of spillover from architectures
 
-==== 4 - link:media/NI-GEN-3.pdf[Internal Representations]
+==== 4 - link:media/NI-GEN-4.pdf[Internal Representations]
 
 _Introduction and analysis of advantages and disadvantages of various internal representations (Stack Based, 3AC, SSA, Sea of Nodes). Design of intermediate representation suitable for `tinyC`. Control and Data Flow graphs._  
 
@@ -34,11 +34,11 @@ _Scopes and their checking. Symbol table. Inference rules. Types and type checki
 
 // Normal slides
 
-==== 6 - Translation
+==== 6 - link:media/NI-GEN-6.pdf[Modern Compilers]
 
-_Practical demonstration of how some tinyC constructs can be translated to tiny86. _
+_Internal representations and basic design choices of modern compilers, namely GCC and LLVM._
 
-// Live coding. 
+// Slides
 
 
 ==== 7 - Optimization

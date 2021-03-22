@@ -29,7 +29,7 @@ Welcome to the new Code Generators course!
 
 
 | 4
-| link:media/NI-GEN-3.pdf[Internal Representations]
+| link:media/NI-GEN-4.pdf[Internal Representations]
 | Syntax-Directed Translation to IR
 |
 
@@ -39,7 +39,7 @@ Welcome to the new Code Generators course!
 |
 
 | 6
-| Translation
+| link:media/NI-GEN-6.pdf[Modern Compilers]
 | Q&A: Internal Representation & Translation 
 |
 
