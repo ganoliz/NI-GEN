@@ -44,7 +44,7 @@ Welcome to the new Code Generators course!
 |
 
 | 7
-| Optimization
+| link:media/NI-GEN-7.pdf[Instruction Selection]
 |
 |
 

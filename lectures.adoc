@@ -40,22 +40,25 @@ _Internal representations and basic design choices of modern compilers, namely G
 
 // Slides
 
+==== 7 - link:media/NI-GEN-7.pdf[Instruction Selection]
 
-==== 7 - Optimization
+_Instruction Selection techniques. Tree tiling, peephole instruction selection. Superopimizers._
+
+==== 8 - Optimization
 
 _An introduction to the intermediate representation optimizer. Local vs Global optimizations. Description of various optimizations, such as peepholer, constant propagation, alias analysis, inlining, loop unrolling, etc. and how they are calculated for the different intermediate representations. The analysis-optimization relationship and scheduling. Link-Time Optimization (LTO) and Profile-Guided-Optimization (PGO)._
 
-==== 8 - Register Allocation, Instruction Selection & Scheduling, Code Layout & Generation
+//==== 8 - Register Allocation, Instruction Selection & Scheduling, Code Layout & Generation
 
-_Register allocation techniques. The importance of instruction selection, scheduling and code layout. Generation of machine code or assembler._
+//_Register allocation techniques. The importance of instruction selection, scheduling and code //layout. Generation of machine code or assembler._
 
 ==== 9 - Target Translation.
 
 _Compiling to target architecture. Patchpoints, register spilling. Compilation of advanced language constructs (objects, virtual functions & dispatch, exceptions, templates). Zero-cost abstractions._
 
-==== 10 - Case Study - LLVM Compiler Infrastructure
+//==== 10 - Case Study - LLVM Compiler Infrastructure
 
-_Introduction to LLVM, how it approaches the things we said so far. I.e. the overview of the IR, interesting instructions. How optimizations are done (scheduler, etc). Backend support. Comparison of other compiler suites_
+//_Introduction to LLVM, how it approaches the things we said so far. I.e. the overview of the IR, interesting instructions. How optimizations are done (scheduler, etc). Backend support. Comparison of other compiler suites_
 
 // Done by me, unless Andrea wants to
 
