@@ -49,29 +49,30 @@ Welcome to the new Code Generators course!
 |
 
 | 8
-| Register Allocation, Instruction Selection & Scheduling, Code Layout & Generation
-| Q&A: IR Optimizations 
+| link:http://selfie.cs.uni-salzburg.at[Selfie] (Guest Lecture)
+| cancelled
 | minimal compilation to IR
 
 | 9
-| Target Translation
+| cancelled
 |
 |
 
-| 10 
-| Case Study - LLVM Compiler
-| Q&A: Backend
-| full unoptimized, some IR opts
+| 10
+| link:media/NI-GEN-8.pdf[Register Allocation]
+| Q&A Offline
+|
 
-| 11
-| Just-in-Time Compilation
-|
-|
+| 11 
+| Compiler Optimizations I (no slides)
+| 
+| 
 
 | 12
-| Debugging Support
-| Q&A: Advanced Techniques
-| Backend Optimizations
+| Compiler Optimizations and Analysis II )(no slides)
+| Q&A Offline
+|
+
 |===
 
 == Languages

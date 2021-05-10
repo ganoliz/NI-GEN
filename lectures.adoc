@@ -44,17 +44,37 @@ _Internal representations and basic design choices of modern compilers, namely G
 
 _Instruction Selection techniques. Tree tiling, peephole instruction selection. Superopimizers._
 
-==== 8 - Optimization
 
-_An introduction to the intermediate representation optimizer. Local vs Global optimizations. Description of various optimizations, such as peepholer, constant propagation, alias analysis, inlining, loop unrolling, etc. and how they are calculated for the different intermediate representations. The analysis-optimization relationship and scheduling. Link-Time Optimization (LTO) and Profile-Guided-Optimization (PGO)._
+==== 8 - link:http://selfie.cs.uni-salzburg.at[Selfie] (Guest Lecture)
+
+_Guest lecture by link:http://cs.uni-salzburg.at/~ck/[Christoph Kirsch] about the Selfie, a self-compiling compiler for RISC-V._
+
+==== 9 - Cancelled
+
+==== 10 - link:media/NI-GEN-8.pdf[Register Allocation]
+
+_Register allocation and assignment. Local and Global register allocation algorithms - top down, bottom up, greedy, graph coloring. Value spilling.   
+
+
+==== 11 - Compiler Optimizations I (no slides)
+
+_Optimizing compilers. Local and global optimizations. Description of most important optimizations._
+
+==== 12 - Compiler Optimizations and Analysis II(no slides)
+
+_Partial Evaluation. Futamura Projections. Practical Introduction to Abstract Interpretation._
+
+//==== 8 - Optimization
+
+//_An introduction to the intermediate representation optimizer. Local vs Global optimizations. Description of various optimizations, such as peepholer, constant propagation, alias analysis, inlining, loop unrolling, etc. and how they are calculated for the different intermediate representations. The analysis-optimization relationship and scheduling. Link-Time Optimization (LTO) and Profile-Guided-Optimization (PGO)._
 
 //==== 8 - Register Allocation, Instruction Selection & Scheduling, Code Layout & Generation
 
 //_Register allocation techniques. The importance of instruction selection, scheduling and code //layout. Generation of machine code or assembler._
 
-==== 9 - Target Translation.
+//==== 9 - Target Translation.
 
-_Compiling to target architecture. Patchpoints, register spilling. Compilation of advanced language constructs (objects, virtual functions & dispatch, exceptions, templates). Zero-cost abstractions._
+//_Compiling to target architecture. Patchpoints, register spilling. Compilation of advanced language constructs (objects, virtual functions & dispatch, exceptions, templates). Zero-cost abstractions._
 
 //==== 10 - Case Study - LLVM Compiler Infrastructure
 
@@ -62,14 +82,13 @@ _Compiling to target architecture. Patchpoints, register spilling. Compilation o
 
 // Done by me, unless Andrea wants to
 
-==== 11 - Just-in-Time Compilation [MID]
+//==== 11 - Just-in-Time Compilation [MID]
 
-_Introduction to JIT. Speculative Execution, Multi-tier architecture. Patchpoints. GC. Languages that suppport JIT compilers (JavaScript, Java, Julia, .NET)._
+//_Introduction to JIT. Speculative Execution, Multi-tier architecture. Patchpoints. GC. Languages that suppport JIT compilers (JavaScript, Java, Julia, .NET)._
 
 // Guest lecture by Oli
 
-==== 12 - Debugging Support
+//==== 12 - Debugging Support
 
-_How to debug compiled code. Breakpoints. Debugging symbols. Debugging optimized code._
+//_How to debug compiled code. Breakpoints. Debugging symbols. Debugging optimized code._
 
-// Guest lecture by Christoph

@@ -1,0 +1,30 @@
+= Exam
+
+The plan is to have one exam towards the end of May, one towards the end of June and one in September. All exams will be online using the default FIT rules:
+
+- you will write on paper, your teams camera must show your face and the paper at the same time
+- you are advised to have another backup camera (phone, etc.) from different angle that may be requested if there are issues (drop in connectivity, you are suspected of cheating, etc.) Failure to produce the backup recording when requested means failing the exam.
+
+The exam consists of two parts:
+
+- written part, lasting 90 minutes during which you will answer several questions (see example below)
+- oral part, which is mandatory and will happen the same day as the written part via a 1:1 teams call where you will have a chance of clarifying your previous answers and will engage in a discussion with the examiner about any of the topics covered
+
+The written part is worth 30 points, while the oral part is worth up to 10 points, but has a veto power, i.e. if a fundamental lack of knowledge is discovered during the oral part, the whole exam is graded F. 
+
+== Example Exam
+
+(5 points) Describe the overall architecture of a compiler. What is front-, middle- and backend or a compiler. What parts of a compiler can be reused for different source languages and what parts of a compiler can be reused for different targets. Why is this important? 
+
+(10 points) What is Register Allocation. Describe main register allocatiomn techiques. What if the program needs more registers than available on the target? 
+
+(10 points) What is an intermediate representation and why is it important. Discuss the different types of IR, their benefits and their drawbacks. Provide an example of a simple program and its representation in the various IRs. 
+
+(5 points) Describe briefly (a few sentences each) the following terms:
+
+- constant propagation
+- inlining
+- link-time optimization
+- RISC and CISC
+- data segment
+
