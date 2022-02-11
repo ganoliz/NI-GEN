@@ -1,7 +1,5 @@
 = Specification
 
-IMPORTANT: The project repo is available at link:https://gitlab.fit.cvut.cz/NI-GEN/tinyc[https://gitlab.fit.cvut.cz/NI-GEN/tinyc]
-
 The larger the project, the harder it is to correctly expect the necessary time investment. Even more so if you are studying the concepts used at the same time. We have therefore structured the project specification and grading to minimize the chance that you will fail the course based on insufficient coursework:
 
 == Minimal Requirements (30 pts)
@@ -12,11 +10,11 @@ Your implementation must at least be able to do the following, all of which toge
 - basic constructs (`if`, `for`, `while`, `do while`)
 - functions
 - at least one local (such as strength reduction) and one global optimization (such as inlining) 
-- compilation to tiny86 with register spilling
+- basic compilation to tiny86 with register spilling
 
 == Additional Features (30 pts)
 
-After the minimum requirements, you may mix & match more advanced features from the list below for up to 30 points. Note that the list is not exhaustive, if you have your own ideas, come to us first:
+After the minimum requirements, you may mix & match more advanced features from the list below for up to 30 points. Note that the list is not exhaustive, nor is it binding. The actual amount of points awarded depends on code quality, used algorithms, etc. If you have your own ideas, come to us first:
 
 - `double`, `bool`, `char` types (5pts)
 - structs (5pts)
@@ -24,7 +22,8 @@ After the minimum requirements, you may mix & match more advanced features from 
 - recursive pointers (such as `int**`) (10pts)
 - all language constructs (including casts, switch, etc.) (5pts)
 - more complex analyses (loop unrolling, loop-invariant code motion, etc., 5-20pts based on complexity)
-- smart register allocation (10pts)
+- smart register allocation (15pts)
+- smart instruction selection (15pts)
 - RISC instructions (5pts)
 - VLIW instructions (10pts)
 - exceptions (20pts)

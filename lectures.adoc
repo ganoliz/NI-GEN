@@ -1,68 +1,57 @@
 = Lectures
 
-IMPORTANT: Due to COVID-19 situation, the course will be held online in Spring 2021. All lectures and tutorials will happen over teams. 
 
-_There will be a total of 12 lectures in the term._ The following list gives a brief information about the main lectures and topics:
+_The following list gives a brief information about the main lectures and topics. Note that their actual order is subject to change:_
 
-==== 1 - link:media/NI-GEN-1.pdf[Overview of a Compiler]
+==== Overview of a Compiler
 
 _Basic overview of a modern compiler and its consituent parts (frontend, middleend, backend, object files, linker, assembler) and recap of basic features. Coursework and course information._
 
-// slides
-
-==== 2 - link:media/NI-GEN-2.pdf[Principles of Compiled Code]
-
-_Details about how compiled code actually works. Information about calling conventions, stack frames, variables, symbols and visibility. Memory areas (heap, stack, globals), alignment. Compilation units (modules, functions, basic blocks). Object files, static vs dynamic linkage, etc. Target architectures._
-
-// slides, was too long and so spilled to that week's tutorial as well
-
-==== 3 - Introduction to tinyC and tiny86
-
-_Introduction to the course project structure, the tinyC language and the tiny86 target architecture you will be using in the class._
-
-// this should eventually go to first tutorial instead of spillover from architectures
-
-==== 4 - link:media/NI-GEN-4.pdf[Internal Representations]
+==== Internal Representations
 
 _Introduction and analysis of advantages and disadvantages of various internal representations (Stack Based, 3AC, SSA, Sea of Nodes). Design of intermediate representation suitable for `tinyC`. Control and Data Flow graphs._  
 
-// slides
+==== Principles of Compiled Code
 
-==== 5 - Semantic Analysis(live coding)
+_Details about how compiled code actually works. Information about calling conventions, stack frames, variables, symbols and visibility. Memory areas (heap, stack, globals), alignment. Compilation units (modules, functions, basic blocks). Object files, static vs dynamic linkage, etc._
 
-_Scopes and their checking. Symbol table. Inference rules. Types and type checking._
-
-// Normal slides
-
-==== 6 - link:media/NI-GEN-6.pdf[Modern Compilers]
+==== Modern Compilers
 
 _Internal representations and basic design choices of modern compilers, namely GCC and LLVM._
 
-// Slides
+==== Semantic Analysis
 
-==== 7 - link:media/NI-GEN-7.pdf[Instruction Selection]
+_Scopes and their checking. Symbol table. Inference rules. Types and type checking._
+
+==== Targets
+
+_CISC, RISC and other main architectures and their effects on compiler design and operation._
+
+==== Instruction Selection
 
 _Instruction Selection techniques. Tree tiling, peephole instruction selection. Superopimizers._
 
-
-==== 8 - link:http://selfie.cs.uni-salzburg.at[Selfie] (Guest Lecture)
-
-_Guest lecture by link:http://cs.uni-salzburg.at/~ck/[Christoph Kirsch] about the Selfie, a self-compiling compiler for RISC-V._
-
-==== 9 - Cancelled
-
-==== 10 - link:media/NI-GEN-8.pdf[Register Allocation]
+==== Register Allocation
 
 _Register allocation and assignment. Local and Global register allocation algorithms - top down, bottom up, greedy, graph coloring. Value spilling.   
 
-
-==== 11 - Compiler Optimizations I (no slides)
+==== Compiler Optimizations I
 
 _Optimizing compilers. Local and global optimizations. Description of most important optimizations._
 
-==== 12 - Compiler Optimizations and Analysis II(no slides)
+==== Compiler Optimizations II
 
 _Partial Evaluation. Futamura Projections. Practical Introduction to Abstract Interpretation._
+
+==== Selfie (Guest Lecture, might be online)
+
+_Guest lecture by link:http://cs.uni-salzburg.at/~ck/[Christoph Kirsch] about the Selfie, a self-compiling compiler for RISC-V._
+
+==== Projects
+
+_Introduction to course projects and design choices made by the respective teams._
+
+
 
 //==== 8 - Optimization
 

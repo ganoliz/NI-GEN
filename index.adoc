@@ -1,10 +1,26 @@
 = Welcome
 
-IMPORTANT: Due to COVID-19 situation, the course will be held online in Spring 2021. All lectures and tutorials will happen over teams. 
+////
+Guest Lecture
+Reserve
 
-IMPORTANT: The course is currently under development. Although the information presented here is mostly accurate if you want to know the general course information, but details, such as grading and project details will be likely changed and you should not rely on them. Everything can change. 
+Introduction to compiler (1)
+Internal Representations (4) - Intro to TinyC
+Principles of compiled code (2a)
+Modern Compilers (6) - TinyC translation to IR
+Semantic Analysis (Live Coding)
+Targets (2b) - Tiny86 Intro, basic translation
+Instruction Selection (7) 
+Register Allocation (8) - IR to Tiny86, advanced
+Optimizations (I) 
+Optimizations (II) - Q&A
 
-Welcome to the new Code Generators course!
+
+tinyC language and tiny86 target (live coding)
+
+////
+
+Welcome to the new Code Generators course! This is the second year of the course, and while a lot of the initial rough edges are hopefully polished by now, the course is still in development. Any suggestions towards the presented topics, project, or course in general are greatly appreciated!
 
 = Schedule
 
@@ -13,73 +29,75 @@ Welcome to the new Code Generators course!
 | # | Lecture | Tutorial | Project  
 
 | 1 
-| link:media/NI-GEN-1.pdf[Compiler Overview]
+| Course Introduction, Compiler Overview
 |
 |
 
-| 2
-| link:media/NI-GEN-2.pdf[Principles of Compiled Code]
-| Target Architectures Overview
+
+
+| 
+| Internal Representations
+| Introduction to TinyC
 | 
 
-| 3
-| tinyC language and tiny86 target (live coding)
 | 
-|
-
-
-| 4
-| link:media/NI-GEN-4.pdf[Internal Representations]
-| Syntax-Directed Translation to IR
-|
-
-| 5
-| Semantic Analysis (live coding)
-| 
-|
-
-| 6
-| link:media/NI-GEN-6.pdf[Modern Compilers]
-| Q&A: Internal Representation & Translation 
-|
-
-| 7
-| link:media/NI-GEN-7.pdf[Instruction Selection]
-|
-|
-
-| 8
-| link:http://selfie.cs.uni-salzburg.at[Selfie] (Guest Lecture)
-| cancelled
-| minimal compilation to IR
-
-| 9
-| cancelled
-|
-|
-
-| 10
-| link:media/NI-GEN-8.pdf[Register Allocation]
-| Q&A Offline
-|
-
-| 11 
-| Compiler Optimizations I (no slides)
+| Principles of Compiled Code
 | 
 | 
 
-| 12
-| Compiler Optimizations and Analysis II )(no slides)
-| Q&A Offline
+
+| 
+| Modern Compilers
+| IR Translation
+|
+
+| 
+| Semantic Analysis
+| 
+|
+
+| 
+| Targets
+| Tiny86, basic translation
+|
+
+| 
+| Instruction Selection
+|
+|
+
+| 
+| Register Allocation
+| Advanced Target Translation
+| 
+
+| 
+| Optimizations I
+|
+|
+
+| 
+| Optimizations II
+| Project Q&A
+|
+
+|  
+| Guest Lecture
+| 
+| 
+
+| 
+| Projects Presentation
+| Project Q&A
 |
 
 |===
 
 == Languages
 
-Since the coursework is a `C`-like language compiler written in `C++`, familiarity with `C++` is essential.
+Since the coursework is a `C`-like language compiler written in `pass:[C++]`, familiarity with `pass:[C++]` is essential.
 
-_All course materials materials (including this webpage) will be in English, but lectures and tutorials themselves will be in Czech (optionally, if we get english-only speaking students, we will use English as well). You can use Czech/English freely_. 
+_All course materials materials (including this webpage) will be in English, but lectures and tutorials themselves will be in Czech (optionally, if we get english-only speaking students, we will use English as well)._ 
 
 
 

@@ -1,7 +1,5 @@
 = Project
 
-IMPORTANT: The project repo is available at link:https://gitlab.fit.cvut.cz/NI-GEN/tinyc[https://gitlab.fit.cvut.cz/NI-GEN/tinyc]
-
 WARNING: The project is a large part of the grade (60%) and is a lot of work. You should start developing it early and make a regular progress throughout the term.
 
 The beauty of compilers comes in part from the fact that here, the saying that _"the devil lies in the details"_ is more pronounced than in many other parts of CS. This is something that cannot be taught in lectures alone, but requires a lot of own work. 
@@ -12,15 +10,15 @@ To this end the term-long project is an implementation of a small `C`-like langu
 
 You must create a git repo for your project (gitlab at CTU is preferred, but you can use any git hosting to which we can get read access). Work in the project must be yours and should be incremental, i.e. git log should show a reasonable number of commits for the different features. The project must be in C++ and use the `tinyverse` platform. 
 
-There will be mandatory checks throughout the term during which you should demonstrate that your project has reasonably evolved. These are not to force strict deadlines on your part, but to allow the instructors to quickly see if you are progressing well, since failure is almost guaranteed if you leave all the project work to the last days available. 
-
 To hand in the project, book a date _before_ your exam with your instructor or TA. 
 
 Make sure to follow some reasonable development practices. It will make the development easier for you and grading easier for us.
 
 #### Teams 
 
-We don't expect students to pair up in teams. In very special circumstances, we may agree to a team, but note that this always at least doubles the ammount of features you will have to implement. If working in a team, responsibilities of team members must be clear and agreed upon beforehand (so that we can make sure the work is evenly distributed in terms of hours _and_ topics covered).
+Students may work on their own compilers on their own, or can team up (up to 3 people in a team). When working in a team, the project scope does not change, but students may split the work, in which case it is expected the level of detail and features supported will be greater. In plain English: If you work in a team, you become responsible for one part of the compiler and must implement that part more thoroughly. The ammount of work is expected to be the same, but you will end up with more complete compiler. 
+
+All teams must be arranged before the start of the coursework and responsibilities split explicitly. 
 
 ## Alternative projects
 
