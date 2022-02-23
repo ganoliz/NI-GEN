@@ -30,36 +30,36 @@ Welcome to the new Code Generators course! This is the second year of the course
 
 | 1 
 | Course Introduction, Compiler Overview
-|
-|
-
-
-
-| 
-| Internal Representations
 | Introduction to TinyC
-| 
-
-| 
-| Principles of Compiled Code
-| 
-| 
+| Clone & build repo
 
 
-| 
-| Modern Compilers
-| IR Translation
-|
 
-| 
+| 2 
 | Semantic Analysis
 | 
-|
+| Add simple typechecking
+
+
+| 3
+| Internal Representations
+| Semantic Analysis II, IR Translation 
+| Add more complex typechecking, start with IL
+
+| 4
+| Principles of Compiled Code
+| 
+| Finalize typechecking, simple translation to IL
+
+| 5
+| Modern Compilers
+| IR Translation II
+| Finish IL translation
 
 | 
 | Targets
 | Tiny86, basic translation
-|
+| 
 
 | 
 | Instruction Selection

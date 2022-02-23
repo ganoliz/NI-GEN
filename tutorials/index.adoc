@@ -1,37 +1,7 @@
 = Tutorials
 
-IMPORTANT: Due to COVID-19 situation, the course will be held online in Spring 2021. All lectures and tutorials will happen over teams. 
-
-_There are 6 tutorials throughout the term (every fortnight)._ The first tutorial is more of a lecture, where details about the language and target used for your projects will be given. The rest of the tutorials follow the same template: A Q&A section where we will be discussing the details and tradeoffs of your solutions, or any ideas you might have. Bring your own questions and don't be shy. 
-
-On some tutorials, there are checkpoints, at which you will be required to show that your project passes some minimal requirements at the time. 
-
 ==== Tutorial 1
 
-//_Introduction to the tiny languages framework, the `tinyC` language and the `tiny86` virtual machine._
+_Introduction to the tiny framework and course projects._
 
-_Recapitulation of basic target architectures (CISC, RISC, EPIC, VLIW), CPU pipelines, super-scalar and out-of-order execution, VLIW_.
-
-==== Tutorial 2
-
-_Recapitulation of basic techniques for syntax-directed translation of basic language constructs._
-
-==== Tutorial 3
-
-_Q&A: Design and implementation choices in your intermediate representation_
-
-==== Tutorial 4
-
-IMPORTANT: Checkpoint: Minimal compilation, i.e. a simple program (basic functions, ints, basic statements) should compile and execute on a target.
-
-_Q&A: IR Optimizations_
-
-==== Tutorial 5
-
-IMPORTANT: Checkpoint: full unoptimized tinyC should execute. IR optimizations (at least some) should be implemented. 
-
-_Q&A: backend optimizations_ 
-
-==== Tutorial 6
-
-IMPORTANT: Checkpoint: Backend optimizations in at least some form. I.e. not everything has to work, but some things must be done. 
+Course repository: https://gitlab.fit.cvut.cz/NI-GEN/ni-gen-22

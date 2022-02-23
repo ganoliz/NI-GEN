@@ -7,6 +7,12 @@ _The following list gives a brief information about the main lectures and topics
 
 _Basic overview of a modern compiler and its consituent parts (frontend, middleend, backend, object files, linker, assembler) and recap of basic features. Coursework and course information._
 
+==== Semantic Analysis
+
+_Scopes and their checking. Symbol table. Inference rules. Types and type checking._
+
+NOTE: To be concluded on Tutorial 2 (scopes, symbol tables). 
+
 ==== Internal Representations
 
 _Introduction and analysis of advantages and disadvantages of various internal representations (Stack Based, 3AC, SSA, Sea of Nodes). Design of intermediate representation suitable for `tinyC`. Control and Data Flow graphs._  
@@ -18,10 +24,6 @@ _Details about how compiled code actually works. Information about calling conve
 ==== Modern Compilers
 
 _Internal representations and basic design choices of modern compilers, namely GCC and LLVM._
-
-==== Semantic Analysis
-
-_Scopes and their checking. Symbol table. Inference rules. Types and type checking._
 
 ==== Targets
 
