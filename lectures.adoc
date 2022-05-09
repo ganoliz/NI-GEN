@@ -3,51 +3,51 @@
 
 _The following list gives a brief information about the main lectures and topics. Note that their actual order is subject to change:_
 
-==== Overview of a Compiler
+==== link:media/NI-GEN-1.pdf[Overview of a Compiler]
 
 _Basic overview of a modern compiler and its consituent parts (frontend, middleend, backend, object files, linker, assembler) and recap of basic features. Coursework and course information._
 
-==== Semantic Analysis
+==== Semantic Analysis (no slides)
 
 _Scopes and their checking. Symbol table. Inference rules. Types and type checking._
 
 NOTE: To be concluded on Tutorial 2 (scopes, symbol tables). 
 
-==== Internal Representations
+==== link:media/NI-GEN-4.pdf[Internal Representations]
 
 _Introduction and analysis of advantages and disadvantages of various internal representations (Stack Based, 3AC, SSA, Sea of Nodes). Design of intermediate representation suitable for `tinyC`. Control and Data Flow graphs._  
 
-==== Principles of Compiled Code
+==== link:media/NI-GEN-2.pdf[Principles of Compiled Code]
 
 _Details about how compiled code actually works. Information about calling conventions, stack frames, variables, symbols and visibility. Memory areas (heap, stack, globals), alignment. Compilation units (modules, functions, basic blocks). Object files, static vs dynamic linkage, etc._
 
-==== Modern Compilers
+==== link:media/NI-GEN-6.pdf[Modern Compilers]
 
 _Internal representations and basic design choices of modern compilers, namely GCC and LLVM._
 
-==== Targets
+==== Targets (no slides)
 
 _CISC, RISC and other main architectures and their effects on compiler design and operation._
 
-==== Instruction Selection
+==== link:media/NI-GEN-7.pdf[Instruction Selection]
 
 _Instruction Selection techniques. Tree tiling, peephole instruction selection. Superopimizers._
 
-==== Register Allocation
+==== link:media/NI-GEN-8.pdf[Register Allocation]
 
 _Register allocation and assignment. Local and Global register allocation algorithms - top down, bottom up, greedy, graph coloring. Value spilling.   
 
-==== Compiler Optimizations I
+==== Compiler Optimizations I (no slides)
 
-_Optimizing compilers. Local and global optimizations. Description of most important optimizations._
+_Introduction to optimizing. Basic framework for abstract interpretation._
 
-==== Compiler Optimizations II
+==== Compiler Optimizations II (no slides)
 
-_Partial Evaluation. Futamura Projections. Practical Introduction to Abstract Interpretation._
+_Optimizing compilers. Local and global optimizations. Description of most important optimizations. Partial Evaluation, Futamura Projections._
 
-==== Selfie (Guest Lecture, might be online)
-
-_Guest lecture by link:http://cs.uni-salzburg.at/~ck/[Christoph Kirsch] about the Selfie, a self-compiling compiler for RISC-V._
+//==== Selfie (Guest Lecture, might be online)
+//
+//_Guest lecture by link:http://cs.uni-salzburg.at/~ck/[Christoph Kirsch] about the Selfie, a self-compiling compiler for RISC-V._
 
 ==== Projects
 

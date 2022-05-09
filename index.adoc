@@ -56,40 +56,41 @@ Welcome to the new Code Generators course! This is the second year of the course
 | IR Translation II
 | Finish IL translation
 
-| 
+| 6
 | Targets
-| Tiny86, basic translation
+| Tiny86
 | 
 
+| 7 
+| Syntax Driven Translation
 | 
+| Simple calculator from source to backend
+
+| 8 
+| Target Translation
+| Tiny86, basic translation
+| Simple calculator from source to target
+
+| 9
 | Instruction Selection
 |
-|
-
 | 
+
+| 10
 | Register Allocation
 | Advanced Target Translation
-| 
+| Control flow, function calls
 
-| 
+| 11
 | Optimizations I
 |
-|
+| Unlimited registers via spilling
 
-| 
+| 12
 | Optimizations II
 | Project Q&A
-|
+| More advanced features (note that deadline is the exam)
 
-|  
-| Guest Lecture
-| 
-| 
-
-| 
-| Projects Presentation
-| Project Q&A
-|
 
 |===
 
