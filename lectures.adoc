@@ -41,7 +41,7 @@ _Register allocation and assignment. Local and Global register allocation algori
 
 _Introduction to optimizing. Basic framework for abstract interpretation._
 
-==== Compiler Optimizations II (no slides)
+==== Compiler Optimizations II (no slides, link:media/opt2/notes.html[notes])
 
 _Optimizing compilers. Local and global optimizations. Description of most important optimizations. Partial Evaluation, Futamura Projections._
 

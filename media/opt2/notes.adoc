@@ -1,0 +1,72 @@
+# Compiler Optimizations
+
+With optimizations, not everything is simply about the number of instructions and their scheduling. Other aspects of the running program, such as caches must be taken into consideration. Furthermore sometimes code is deliberately made less performant (i.e to mitigate side channel vulnerabilities, etc.)
+
+Key things to optimize for: 
+
+- cache already computed stuff where possible
+- less code to exectute
+- minimize code overheads (jumps, fast instructions, calls, etc).
+- improve cache locality and exploit the memory hierarchy
+- parallelization
+
+## Simple Data Flow Optimizations
+
+- Common Subexpression Elimination (CSE) - find identical computations and reuse them
+- Global Value Numbering (SSA specific) transformation akin to CSE. Both GVE and CSE often used as they complement each other
+- Strength Reduction - replace more expensive operations with less expensive equivalent ones (such as * 2^N => << n)
+- Constant Folding and Propagation - replace values known to be contants with the constants. Note this optimization in itself does not really optimize the code, just makes it easier for others to then actually optimize (such as strength reduction, dead code removal, etc.) 
+- Bounds checking elimination - remove bounds checks where not necessary
+- Jump Threading (consecutive conditionals over same or similar conditions are fused together), less jump overhead
+
+## Code Removal
+
+- Dead Code Elimination - whole functions or basic blocks
+- Dead Instruction Elimination - delete instruction whose effects are not observable
+- Dead Store Elimination - special case of dead instruction elimination. Harder for stores as it depends on the semantics of the source language (e.g. `volatile` in C/C++)
+
+## Function Call Optimizations
+
+- Inlining - C-c + C-v of function body to callsite. May lead to larger and even less performant code (more icache misses). Complex heuristics to determine when to inline. 
+- Tail Call Optimization (a must for functional languages) - replace recursive tail call with a jump to itself after prologue (removes the call overhead)
+
+## Loop Optimizations
+
+Very important since naturally code happens in a loop, it will have major impact on the runtime. 
+
+Some optimizations are very lowlevel, such as:
+
+- loop unrolling - reduces the loop overhead, easier to parallelize, in the past led to less execution overhead by eliminating the jumps, not thet much of an issue nowadays
+- loop inversion: while() -> if () do while(). This is very low level as it makes less jumps (and jump is a pipeline stall). it's because the last jump from the code is not taken, while in while() it is taken and then the condition jumps out
+- but this is a bit silly for just 2 jumps, unless the # of iters is small. It also allows safer loop invariant code motion, which is nowadays the main reason
+
+Often times memory locality is very important and huge gains can be made with proper alignment:
+
+- loop interchange = swap inner/outer loops to improve cache locality
+- loop splitting - single loop split into multiple loops iterating over disjoint contiguous areas of the previous range. Mostly improves cache locality, improves potential parallelism
+- loop peeling - special case of loop splitting where the first or last iteration that might be more complex is split, improves cache locality and may also be a bit of invariant code motion
+- loop reversal = reverse the order of the loop. This does not change performance of the program, but rather enables other opimizations by potentially reducing dependencies
+- loop fission = breaks loop into multiple loops with distinct bodies (helps reference locality for the smaller bodies)
+- loop fusion = combine multiple loops iterating the same amount of times / over same data as long as they do not reference each other
+
+Code that is constant for all executions of the loop for each invocation can be moved out of the loop saving time, and/or improving the overhead:
+
+- loop invariant code motion : code that does not rely on the induction variable can be scheduled before the loop. This is only true if the loop is executed at least once, i.e. ideal for do-whole loops. 
+- loop unswitching = conditionals in the loop that will be the same for the whole loop are moved out of the loop and the rest of the loop is duplicated
+
+Much can be said about loop parallelization, but this goes above the scope of the course. 
+
+## Partial Evaluation
+
+Program's inputs are split into static ones, to whose constant values the program specializes and dynamic ones that will be supplied at runtime. Can vastly improve efficiency and is basis for optimizations such as devirtualization, etc. 
+
+Often used with speculative optimization as well (speculate that some things will be static and bail out to unoptimized code if they won't). 
+
+## Futamura Projection
+
+Theoretical framework for automatic construction of compilers from interpreters (and more) via partial evaluation. 
+
+- 1st futamura projection: Interpreter specialized to a program yields executable
+- 2nd futamura projection: Specializer specialized to interpreter yields a compiler (given a program produces its executable)
+- 3rd futamura projection: Specializer specialized to itself yields a compiler generator, a tool that given an interpreter, produces a compiler. 
+
