@@ -7,19 +7,17 @@ _The following list gives a brief information about the main lectures and topics
 
 _Basic overview of a modern compiler and its consituent parts (frontend, middleend, backend, object files, linker, assembler) and recap of basic features. Coursework and course information._
 
+==== link:media/NI-GEN-2.pdf[Principles of Compiled Code]
+
+_Details about how compiled code actually works. Information about calling conventions, stack frames, variables, symbols and visibility. Memory areas (heap, stack, globals), alignment. Compilation units (modules, functions, basic blocks). Object files, static vs dynamic linkage, etc._
+
 ==== Semantic Analysis (no slides)
 
 _Scopes and their checking. Symbol table. Inference rules. Types and type checking._
 
-NOTE: To be concluded on Tutorial 2 (scopes, symbol tables). 
-
 ==== link:media/NI-GEN-4.pdf[Internal Representations]
 
 _Introduction and analysis of advantages and disadvantages of various internal representations (Stack Based, 3AC, SSA, Sea of Nodes). Design of intermediate representation suitable for `tinyC`. Control and Data Flow graphs._  
-
-==== link:media/NI-GEN-2.pdf[Principles of Compiled Code]
-
-_Details about how compiled code actually works. Information about calling conventions, stack frames, variables, symbols and visibility. Memory areas (heap, stack, globals), alignment. Compilation units (modules, functions, basic blocks). Object files, static vs dynamic linkage, etc._
 
 ==== link:media/NI-GEN-6.pdf[Modern Compilers]
 
@@ -28,6 +26,13 @@ _Internal representations and basic design choices of modern compilers, namely G
 ==== Targets (no slides)
 
 _CISC, RISC and other main architectures and their effects on compiler design and operation._
+
+NOTE: We will also cover the rest from lecture 2 here as it deals with target specifics.  
+
+
+==== Syntax Driven Translation (no slides)
+
+_A non-exhaustive tutorial on how to translate various simple and advanced programming language features to machine code._
 
 ==== link:media/NI-GEN-7.pdf[Instruction Selection]
 
@@ -48,12 +53,6 @@ _Optimizing compilers. Local and global optimizations. Description of most impor
 //==== Selfie (Guest Lecture, might be online)
 //
 //_Guest lecture by link:http://cs.uni-salzburg.at/~ck/[Christoph Kirsch] about the Selfie, a self-compiling compiler for RISC-V._
-
-==== Projects
-
-_Introduction to course projects and design choices made by the respective teams._
-
-
 
 //==== 8 - Optimization
 
