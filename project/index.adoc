@@ -24,6 +24,8 @@ All teams must be arranged before the start of the coursework and responsibiliti
 
 By default, students are expected to implement an optimizing compiler for the `tinyC` language that will generate machine code for the `t86` target. You will be provided with a working `tinyC` lexer and parser and are expected to implement your compiler in `C++`. 
 
+The `tinyC` language project skeleton can be found at link:https://gitlab.fit.cvut.cz/NI-GEN/ni-gen-23[gitlab].
+
 However, alternate projects are encouraged as well. You can alter the input language (as long as it remains interesting), or the implementation language (you might have to write your own parser), or both. The `t86` target supports text input so no `C++` bindings are necessary. 
 
 You can also focus on other than `t86` architecture, but bear in mind this is strictly more work and more perilous journey.  
