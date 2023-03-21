@@ -8,7 +8,7 @@ To this end the term-long project is an implementation of a small `C`-like langu
 
 ## Formalities
 
-You must create a git repo for your project (gitlab at CTU is preferred, but you can use any git hosting to which we can get read access). Work in the project must be yours and should be incremental, i.e. git log should show a reasonable number of commits for the different features. The project must be in C++ and use the `tinyverse` platform. 
+You must create a git repo for your project (gitlab at CTU is preferred, but you can use any git hosting to which we can get read access). Work in the project must be yours and should be incremental, i.e. git log should show a reasonable number of commits for the different features. 
 
 To hand in the project, book a date _before_ your exam with your instructor or TA. 
 
@@ -20,9 +20,15 @@ Students may work on their own compilers on their own, or can team up (up to 3 p
 
 All teams must be arranged before the start of the coursework and responsibilities split explicitly. 
 
-## Alternative projects
+## Project topic
 
-In theory, alternative project ideas may be accepted after previous discussion with us. These will have to be equaly large projects that sit firmly in the code generation area. Possible candidates are various backends (LLVM, RISC-V) for `tinyC`, or different languages (object oriented, functional, etc.).
+By default, students are expected to implement an optimizing compiler for the `tinyC` language that will generate machine code for the `t86` target. You will be provided with a working `tinyC` lexer and parser and are expected to implement your compiler in `C++`. 
+
+The `tinyC` language project skeleton can be found at link:https://gitlab.fit.cvut.cz/NI-GEN/ni-gen-23[gitlab].
+
+However, alternate projects are encouraged as well. You can alter the input language (as long as it remains interesting), or the implementation language (you might have to write your own parser), or both. The `t86` target supports text input so no `C++` bindings are necessary. 
+
+You can also focus on other than `t86` architecture, but bear in mind this is strictly more work and more perilous journey.  
 
 NOTE: Since the projects are lot of work to begin with, a lot of them can be developed into a master thesis. Talk to us if you might be interested in pursuing this. 
 

@@ -2,6 +2,4 @@
 
 ==== Tutorial 1
 
-_Introduction to the tiny framework and course projects._
-
-Course repository: https://gitlab.fit.cvut.cz/NI-GEN/ni-gen-22
+_Spillover from lecture._
