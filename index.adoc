@@ -13,13 +13,10 @@ Welcome to the new Code Generators course! This is the third year of the course,
 | Introduction to TinyC
 | 
 
-
-
 | 2 
 | Principles of Compiled Code
 | 
 | Figure out which project you want
-
 
 | 3
 | Semantic Analysis
@@ -74,7 +71,7 @@ Welcome to the new Code Generators course! This is the third year of the course,
 
 |===
 
-_All course materials materials (including this webpage) will be in English, but lectures and tutorials themselves will be in Czech (optionally, if we get english-only speaking students, we will use English as well)._ 
+_All course materials (including this webpage) will be in English, but lectures and tutorials themselves will be in Czech (optionally, if we get english-only speaking students, we will use English as well)._ 
 
 
 

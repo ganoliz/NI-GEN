@@ -26,6 +26,8 @@ By default, students are expected to implement an optimizing compiler for the `t
 
 The `tinyC` language project skeleton can be found at link:https://gitlab.fit.cvut.cz/NI-GEN/ni-gen-23[gitlab].
 
+The `t86` target VM with debugger can be found at link:https://github.com/Gregofi/t86-with-debug[github].
+
 However, alternate projects are encouraged as well. You can alter the input language (as long as it remains interesting), or the implementation language (you might have to write your own parser), or both. The `t86` target supports text input so no `C++` bindings are necessary. 
 
 You can also focus on other than `t86` architecture, but bear in mind this is strictly more work and more perilous journey.  
