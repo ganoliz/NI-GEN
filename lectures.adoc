@@ -42,11 +42,11 @@ _Instruction Selection techniques. Tree tiling, peephole instruction selection. 
 
 _Register allocation and assignment. Local and Global register allocation algorithms - top down, bottom up, greedy, graph coloring. Value spilling.   
 
-==== Compiler Optimizations I (no slides)
+==== Compiler Optimizations I (no slides) 
 
 _Introduction to optimizing. Basic framework for abstract interpretation._
 
-==== Compiler Optimizations II (no slides, link:media/opt2/notes.html[notes])
+==== link:media/NI-GEN-Optimizations.pdf[Compiler Optimizations II]
 
 _Optimizing compilers. Local and global optimizations. Description of most important optimizations. Partial Evaluation, Futamura Projections._
 

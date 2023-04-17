@@ -3,3 +3,11 @@
 ==== Tutorial 1
 
 _Spillover from lecture._
+
+===== Tutorial 2
+
+_Typechecking._
+
+===== Tutorial 3
+
+_Spillover from lecture._
