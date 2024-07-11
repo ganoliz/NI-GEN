@@ -1,0 +1,81 @@
+= Welcome
+
+Welcome to the new Code Generators course! This is the third year of the course, and while a lot of the initial rough edges are hopefully polished by now, the course is still in development. Any suggestions towards the presented topics, project, or course in general are greatly appreciated!
+
+= Schedule
+
+[%autowidth]
+|===
+| # | Lecture | Tutorial | Project  
+
+| 1 
+| Course Introduction, Compiler Overview
+| Introduction to TinyC
+| 
+
+| 2 
+| Principles of Compiled Code
+| 
+| Figure out which project you want
+
+| 3
+| Semantic Analysis
+| Semantic Analysis
+| Parser, start working on type analysis
+
+| 4
+| Internal Representations
+| 
+| Finish type analysis
+
+| 5
+| Modern Compilers
+| IR Translation
+| IR Design & translation
+
+| 6
+| Targets
+| 
+| IR Design & translation
+
+| 7 
+| Syntax Driven Translation - t86
+| Syntax Driven Translation - t86
+| Simple calculator from source to backend
+
+| 8 
+| Instruction Selection
+| 
+| Control flow, function calls codegen
+
+| 9
+| Register Allocation
+| Project Presentations
+| Yet more code generation
+
+| 10
+| Optimizations I
+| 
+| IS, RA
+
+| 11
+| Optimizations II
+| Project Presentations
+| IS, RA
+
+| 12
+| Reserve, extra topics (debugging, JIT, PGO, etc.)
+| 
+| More advanced features (note that deadline is the exam)
+
+
+|===
+
+_All course materials (including this webpage) will be in English, but lectures and tutorials themselves will be in Czech (optionally, if we get english-only speaking students, we will use English as well)._ 
+
+
+
+
+
+
+
